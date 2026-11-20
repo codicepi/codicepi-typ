@@ -1,0 +1,23 @@
+# File compilati di output
+/*.pdf
+/*.png
+/*.svg
+
+# File temporanei e cache di Typst / Tinymist
+.typst/
+*.tmp
+
+# Sistemi operativi
+.DS_Store
+Thumbs.db
+
+# Editor (VS Code, Zed, Vim, ecc.)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# 
+.tools
