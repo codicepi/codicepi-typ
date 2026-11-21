@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="15mm" height="16mm" viewBox="0 0 1500 1600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="28.222" stroke-linejoin="round" xml:space="preserve">
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="round" d="M 287,87 L 287,1287 "/>
+ <g>
+  <defs>
+   <pattern id="pattern1" x="87" y="87" width="201" height="1201" patternUnits="userSpaceOnUse">
+    <g transform="translate(-87,-87)">
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="147" x2="147" y2="87"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="259" x2="259" y2="87"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="371" x2="287" y2="171"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="483" x2="287" y2="283"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="595" x2="287" y2="395"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="707" x2="287" y2="507"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="819" x2="287" y2="619"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="931" x2="287" y2="731"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="1043" x2="287" y2="843"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="1155" x2="287" y2="955"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="1267" x2="287" y2="1067"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="179" y1="1287" x2="287" y2="1179"/>
+    </g>
+   </pattern>
+  </defs>
+  <path style="fill:url(#pattern1)" d="M 187,1287 L 87,1287 87,87 287,87 287,1287 187,1287 Z "/>
+ </g>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 1182,688 C 1182,740 1168,792 1142,838 1115,883 1077,921 1032,948 986,974 934,988 882,988 829,988 777,974 731,948 686,921 648,883 621,838 595,792 581,740 581,688 581,635 595,583 621,537 648,492 686,454 731,427 777,401 829,387 882,387 934,387 986,401 1032,427 1077,454 1115,492 1142,537 1168,583 1182,635 1182,688 L 1182,688 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-linejoin="round" d="M 1182,688 C 1182,740 1168,792 1142,838 1115,883 1077,921 1032,948 986,974 934,988 882,988 829,988 777,974 731,948 686,921 648,883 621,838 595,792 581,740 581,688 581,635 595,583 621,537 648,492 686,454 731,427 777,401 829,387 882,387 934,387 986,401 1032,427 1077,454 1115,492 1142,537 1168,583 1182,635 1182,688 Z "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 1382,1382 L 1080,1231 1080,1533 1382,1382 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="round" d="M 1382,1382 L 1080,1231 1080,1533 1382,1382 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="round" d="M 587,687 L 287,687 "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="round" d="M 881,992 C 881,1072 881,1072 981,1072 981,1072 1081,1072 1081,1152 1081,1232 981,1232 981,1232 L 781,1232 C 781,1232 681,1232 681,1312 681,1392 781,1392 781,1392 L 1181,1392 "/>
+</svg>

@@ -1,6 +1,6 @@
-#import "../../codicepi-template.typ": comma, c, nota, n,table-heading
+#import "../../codicepi-template.typ": Rambiente, Rbeni, Rvita, c, comma, nota, qf, qfd, qty, table-heading
 
-== Termini, definizioni e simboli grafici
+== Termini, definizioni e simboli grafici <ch_definizioni>
 
 === Premessa
 
@@ -24,7 +24,7 @@
 
 #c[Regola tecnica orizzontale (RTO): regola tecnica di prevenzione incendi applicabile a tutte le attività.]
 
-#n[Ai fini del presente documento è considerata regola tecnica orizzontale l'insieme dei capitoli compresi nelle sezioni _Generalità, Strategia antincendio e Metodi_.]
+#nota[Ai fini del presente documento è considerata regola tecnica orizzontale l'insieme dei capitoli compresi nelle sezioni _Generalità, Strategia antincendio e Metodi_.]
 
 #c[Regola tecnica verticale (RTV): regola tecnica di prevenzione incendi applicabile ad una specifica attività o ad ambiti di essa, con specifiche indicazioni, complementari o sostitutive di quelle previste nella regola tecnica orizzontale.]
 
@@ -36,7 +36,7 @@
 
 #c[Misura antincendio: categoria omogenea di strumenti di prevenzione, protezione e gestionali per la riduzione del rischio di incendio.]
 
-#n[Ad esempio: resistenza al fuoco, reazione al fuoco, compartimentazione, esodo, ...]
+#nota[Ad esempio: resistenza al fuoco, reazione al fuoco, compartimentazione, esodo, ...]
 
 #c[Protezione attiva: insieme delle misure antincendio atte a ridurre le conseguenze di un incendio, che richiedono l'azione dell'uomo o l'attivazione di un impianto.]
 
@@ -46,15 +46,15 @@
 
 #c[Soluzione conforme (_deemed to satisfy provision_): soluzione progettuale di immediata applicazione nei casi specificati, che garantisce il raggiungimento del collegato livello di prestazione.]
 
-#n[Le soluzioni conformi sono soluzioni progettuali prescrittive che non richiedono ulteriori valutazioni tecniche (es. "La distanza di protezione è pari a 5 m").]
+#nota[Le soluzioni conformi sono soluzioni progettuali prescrittive che non richiedono ulteriori valutazioni tecniche (es.~"La distanza di protezione è pari a 5 m").]
 
 #c[Soluzione alternativa (_alternative solution_): soluzione progettuale alternativa alle soluzioni conformi. Il professionista antincendio è tenuto a dimostrare il raggiungimento del collegato livello di prestazione impiegando uno dei _metodi di progettazione della sicurezza antincendio_ ammessi.]
 
-#n[Le soluzioni alternative sono soluzioni progettuali prestazionali che richiedono ulteriori valutazioni tecniche (es. "La distanza di separazione deve essere calcolata imponendo irraggiamento massimo dal focolare verso l'obiettivo pari a 12,6 kW/m#super[2]").]
+#nota[Le soluzioni alternative sono soluzioni progettuali prestazionali che richiedono ulteriori valutazioni tecniche (es.~"_La distanza di separazione deve essere calcolata imponendo irraggiamento massimo dal focolare verso l'obiettivo pari a #qty("12,6", "kW/m^2")_".]
 
 #c[Soluzione in deroga: soluzione progettuale per la quale è richiesta l'attivazione del procedimento di deroga, così come previsto dalla normativa vigente. Il progettista è tenuto a dimostrare il raggiungimento degli obiettivi di sicurezza antincendio impiegando uno dei _metodi di progettazione della sicurezza antincendio_ ammessi.]
 
-#c[Metodo di progettazione della sicurezza antincendio: metodo di progettazione specificato nel capitolo Errore: sorgente del riferimento non trovata del presente documento.] //FIXME
+#c[Metodo di progettazione della sicurezza antincendio: metodo di progettazione specificato nel @ch_progettazione del presente documento.]
 
 #c[Prodotto per uso antincendio: materiale, componente, dispositivo, apparecchio, elemento per il quale, in relazione alla valutazione del rischio connesso al suo impiego, è prevista una caratterizzazione delle prestazioni antincendio.]
 
@@ -62,9 +62,9 @@
 
 === Normazione volontaria
 
-#n[Per le definizioni di _specifica tecnica_, _norma_, _prodotto della normazione europea_, _progetto di norma_ e _specifica tecnica armonizzata_, ci si riferisce al Regolamento (UE) n. 1025/2012 del Parlamento europeo e del Consiglio, del 25 ottobre 2012. Per le definizioni di _valutazione europea_, _documento per la valutazione tecnica europea_ e _specifica tecnica armonizzata_ ci si riferisce al Regolamento (UE) n. 305/2011 del Parlamento europeo e del Consiglio, del 9 marzo 2011. Per le definizioni di _Technical Specification_ (TS) e _Technical Report_ (TR) ci si riferisce ai documenti CEN.]
+#nota[Per le definizioni di _specifica tecnica_, _norma_, _prodotto della normazione europea_, _progetto di norma_ e _specifica tecnica armonizzata_, ci si riferisce al Regolamento (UE) n. 1025/2012 del Parlamento europeo e del Consiglio, del 25 ottobre 2012. Per le definizioni di _valutazione europea_, _documento per la valutazione tecnica europea_ e _specifica tecnica armonizzata_ ci si riferisce al Regolamento (UE) n. 305/2011 del Parlamento europeo e del Consiglio, del 9 marzo 2011. Per le definizioni di _Technical Specification_ (TS) e _Technical Report_ (TR) ci si riferisce ai documenti CEN.]
 
-#n[Come specificato al paragrafo G.1.25, l'applicazione della normazione volontaria citata nel presente documento non è _obbligatoria_.]  // FIXME
+#nota[Come specificato al @ch_definizioni_linguaggio, l'applicazione della normazione volontaria citata nel presente documento non è _obbligatoria_.]
 
 #c[Norma (o norma tecnica): specifica tecnica adottata da un organismo di normazione riconosciuto, per applicazione ripetuta o continua, alla quale non è obbligatorio conformarsi, e che appartenga a una delle seguenti categorie:
 
@@ -77,21 +77,22 @@
   + norma nazionale: norma adottata da un organismo di normazione nazionale.
 ]
 
-#n[Sono organismi internazionali di normazione: ISO (Organizzazione internazionale per la normazione), IEC (Commissione elettrotecnica internazionale) ed ITU (Unione internazionale delle telecomunicazioni).
-Sono organizzazioni europee di normazione: CEN (Comitato europeo di normazione), Cenelec (Comitato europeo di normazione elettrotecnica), ETSI (Istituto europeo per le norme di telecomunicazione).]
+#nota[Sono organismi internazionali di normazione: ISO (Organizzazione internazionale per la normazione), IEC (Commissione elettrotecnica internazionale) ed ITU (Unione internazionale delle telecomunicazioni).
+  Sono organizzazioni europee di normazione: CEN (Comitato europeo di normazione), Cenelec (Comitato europeo di normazione elettrotecnica), ETSI (Istituto europeo per le norme di telecomunicazione).]
 
-#n[Le _norme armonizzate_ e, più in generale, le _specifiche tecniche armonizzate_ sono solitamente riferite alla determinazione delle prestazioni di prodotti ai fini della relativa commercializzazione nello Spazio Economico Europeo (SEE).]
+#nota[Le _norme armonizzate_ e, più in generale, le _specifiche tecniche armonizzate_ sono solitamente riferite alla determinazione delle prestazioni di prodotti ai fini della relativa commercializzazione nello Spazio Economico Europeo (SEE).]
 
-#n[Le organizzazioni di normazione possono essere equivalentemente qualificate come _enti_ o _organismi di standardizzazione_ o _di normalizzazione_. Ad esempio, sono enti di normazione nazionale: DIN e DKE (Germania), AFNOR (Francia), UNI e CEI (Italia), NEN e NEC (Paesi Bassi), BSI (Regno Unito), ...]
+#nota[Le organizzazioni di normazione possono essere equivalentemente qualificate come _enti_ o _organismi di standardizzazione_ o _di normalizzazione_. Ad esempio, sono enti di normazione nazionale: DIN e DKE (Germania), AFNOR (Francia), UNI e CEI (Italia), NEN e NEC (Paesi Bassi), BSI (Regno Unito), ...]
 
 #c[Prodotto della normazione europea: qualsiasi altra specifica tecnica, diversa dalle norme europee, adottata da un'organizzazione europea di normazione per applicazione ripetuta o continua, alla quale non è obbligatorio conformarsi.
 
-Si riportano i seguenti esempi di prodotti della normazione europea:
+  Si riportano i seguenti esempi di prodotti della normazione europea:
 
   + _Technical Specification_ (TS): documento tecnico di carattere normativo il cui sviluppo può essere previsto quando varie alternative, non sufficienti a raggiungere un accordo o una norma europea o per la necessità di differenti specifiche sperimentali o a causa dell'evoluzione tecnologica, devono necessariamente coesistere in vista di una futura armonizzazione;
-  + _Technical Report_ (TR): documento tecnico di carattere informativo che fornisce informazioni sul contenuto tecnico del lavoro di normazione in atto. Generalmente viene predisposto quando si ritiene urgente o necessario fornire agli enti nazionali di normazione informazioni tecniche di dettaglio.]
+  + _Technical Report_ (TR): documento tecnico di carattere informativo che fornisce informazioni sul contenuto tecnico del lavoro di normazione in atto. Generalmente viene predisposto quando si ritiene urgente o necessario fornire agli enti nazionali di normazione informazioni tecniche di dettaglio.
+]
 
-#n[Le TS devono essere adottate dagli organismi nazionali di normazione, mentre le TR possono non essere adottate a livello nazionale.]
+#nota[Le TS devono essere adottate dagli organismi nazionali di normazione, mentre le TR possono non essere adottate a livello nazionale.]
 
 #c[Progetto di norma: documento contenente il testo delle specifiche tecniche relative a una determinata materia, predisposto ai fini dell'adozione secondo la procedura di normazione pertinente, quale risulta dai lavori preparatori e qual è distribuito ai fini di inchiesta pubblica o commento.]
 
@@ -99,7 +100,7 @@ Si riportano i seguenti esempi di prodotti della normazione europea:
 
 #c[Norma riconosciuta a livello internazionale: norma adottata da un organismo riconosciuto a livello internazionale.]
 
-#n[Sono organismi riconosciuti a livello internazionale tutti gli organismi di normazione extra europei citati nel presente documento e quelli comunque tradizionalmente riconosciuti nel settore antincendio. Ad esempio: NFPA, ANSI/UL, ASTM, API, FM Global, FPA, NIST, SFPE, TNO, VDS, Energy Institute, IGEM, VTT, BRANZ, ...]
+#nota[Sono organismi riconosciuti a livello internazionale tutti gli organismi di normazione extra europei citati nel presente documento e quelli comunque tradizionalmente riconosciuti nel settore antincendio. Ad esempio: NFPA, ANSI/UL, ASTM, API, FM Global, FPA, NIST, SFPE, TNO, VDS, Energy Institute, IGEM, VTT, BRANZ, ...]
 
 === Attività
 
@@ -107,21 +108,21 @@ Si riportano i seguenti esempi di prodotti della normazione europea:
 
 #c[Attività soggetta: _attività_ soggetta ai controlli di prevenzione incendi di competenza del Corpo nazionale dei Vigili del fuoco.]
 
-#n[Le attività soggette sono riportate nell'allegato I al decreto del presidente della Repubblica 1 agosto 2011 n°151.]
+#nota[Le attività soggette sono riportate nell'allegato I al decreto del presidente della Repubblica 1 agosto 2011 n°151.]
 
 #c[Attività con valutazione del progetto: _attività soggetta_ il cui progetto antincendio _è valutato_, anche in deroga, dal Corpo nazionale dei Vigili del fuoco.]
 
-#n[Sono incluse nella definizione sia le attività soggette di categoria B o C dell'allegato III del DM 7 agosto 2012, per le quali è prevista la valutazione del progetto antincendio, che le attività soggette di categoria A, del medesimo allegato, nel caso in cui il progetto antincendio sia sottoposto alla valutazione in deroga secondo le procedure previste dalla vigente normativa.]
+#nota[Sono incluse nella definizione sia le attività soggette di categoria B o C dell'allegato III del DM 7 agosto 2012, per le quali è prevista la valutazione del progetto antincendio, che le attività soggette di categoria A, del medesimo allegato, nel caso in cui il progetto antincendio sia sottoposto alla valutazione in deroga secondo le procedure previste dalla vigente normativa.]
 
 #c[Attività senza valutazione del progetto: _attività soggetta_ il cui progetto antincendio _non è valutato_, neanche in deroga, dal Corpo nazionale dei Vigili del fuoco.]
 
-#n[Sono incluse nella definizione le attività soggette di categoria A dell'allegato III del DM 7 agosto 2012, non ricomprese nella definizione di cui al comma 3..]
+#nota[Sono incluse nella definizione le attività soggette di categoria A dell'allegato III del DM 7 agosto 2012, non ricomprese nella definizione di cui al comma 3.]
 
 #c[Attività esistente: attività in esercizio alla data di entrata in vigore della regola tecnica di riferimento.]
 
 #c[Attività all'aperto: attività o porzione d'attività, comprensiva delle sue vie d'esodo, svolta in area delimitata e prevalentemente in _spazio a cielo libero_, che consente a fumo e calore dell'incendio di disperdersi direttamente in atmosfera.]
 
-#n[Ad esempio, non sono considerate _attività all'aperto_ quelle svolte su terrazze, aventi vie d'esodo all'interno di opere da costruzione.]
+#nota[Ad esempio, non sono considerate _attività all'aperto_ quelle svolte su terrazze, aventi vie d'esodo all'interno di opere da costruzione.]
 
 === Soggetti
 
@@ -141,21 +142,21 @@ Si riportano i seguenti esempi di prodotti della normazione europea:
 
 #c[Piano: superficie calpestabile.]
 
-#c[Piano di riferimento del compartimento: _piano_ del luogo esterno verso cui avviene prevalentemente l'_esodo degli occupanti_ del compartimento e da cui _accedono i soccorritori_. Se non è presente piano con tali caratteristiche, si considera il piano di _accesso dei soccorritori_ con le migliori caratteristiche di operatività antincendio (capitolo Errore: sorgente del riferimento non trovata). Per ogni compartimento è determinato un unico piano di riferimento, che generalmente corrisponde con la strada pubblica o privata di accesso. La determinazione del piano di riferimento del compartimento è riportata nel progetto.] // FIXME
+#c[Piano di riferimento del compartimento: _piano_ del luogo esterno verso cui avviene prevalentemente l'_esodo degli occupanti_ del compartimento e da cui _accedono i soccorritori_. Se non è presente piano con tali caratteristiche, si considera il piano di _accesso dei soccorritori_ con le migliori caratteristiche di operatività antincendio (@ch_operatività). Per ogni compartimento è determinato un unico piano di riferimento, che generalmente corrisponde con la strada pubblica o privata di accesso. La determinazione del piano di riferimento del compartimento è riportata nel progetto.]
 
-#n[Si riportano esempi nell'illustrazione G.1-3.] // FIXME
+#nota[Si riportano esempi nell'@il_altezza_antincendio_quote.]
 
 #c[Quota di piano: dislivello tra il _piano_ ed il relativo _piano di riferimento del compartimento_ cui appartiene.]
 
-#n[La quota di piano può essere positiva, negativa o nulla. Si riportano esempi nell'illustrazione G.1-3.] // FIXME
+#nota[La quota di piano può essere positiva, negativa o nulla. Si riportano esempi nell'@il_altezza_antincendio_quote.]
 
-#c[Altezza antincendio: massima _quota dei piani_ dell'attività. Sono esclusi i piani con presenza occasionale e di breve durata di personale addetto (es. vani tecnici).]
+#c[Altezza antincendio: massima _quota dei piani_ dell'attività. Sono esclusi i piani con presenza occasionale e di breve durata di personale addetto (es.~vani tecnici).]
 
-#n[Si riportano esempi nell'illustrazione G.1-3.] // FIXME
+#nota[Si riportano esempi nell'@il_altezza_antincendio_quote.]
 
-#c[Quota del compartimento: dislivello tra il piano del compartimento ed il relativo piano di riferimento. In caso di compartimento multipiano si assume il dislivello che determina le soluzioni più gravose (es. per il piano _più elevato_ di compartimento fuori terra, per il piano _più profondo_ di compartimento interrato).]
+#c[Quota del compartimento: dislivello tra il piano del compartimento ed il relativo piano di riferimento. In caso di compartimento multipiano si assume il dislivello che determina le soluzioni più gravose (es.~per il piano _più elevato_ di compartimento fuori terra, per il piano _più profondo_ di compartimento interrato).]
 
-#n[La quota del compartimento può essere positiva, negativa o nulla. Si riportano esempi nell'illustrazione G.1-3.] // FIXME
+#nota[La quota del compartimento può essere positiva, negativa o nulla. Si riportano esempi nell'@il_altezza_antincendio_quote.]
 
 #c[Compartimento o piano fuori terra: compartimento o piano avente quota non negativa.]
 
@@ -163,27 +164,51 @@ Si riportano i seguenti esempi di prodotti della normazione europea:
 
 #c[Ambito: porzione delimitata dell'attività avente la caratteristica o la qualità descritta nella specifica misura.]
 
-#n[L'ambito può riferirsi all'intera attività o a parte di essa. Ad esempio: piano, compartimento, opera da costruzione, area a rischio specifico, area all'aperto, area sotto tettoia, ...]
+#nota[L'ambito può riferirsi all'intera attività o a parte di essa. Ad esempio: piano, compartimento, opera da costruzione, area a rischio specifico, area all'aperto, area sotto tettoia, ...]
 
 #c[Superficie lorda di un ambito: superficie in pianta compresa entro il perimetro interno che delimita l'ambito.]
 
-#n[Se l'ambito è multipiano o vi sono soppalchi si intende la somma delle superfici lorde di tutti i piani.]
+#nota[Se l'ambito è multipiano o vi sono soppalchi si intende la somma delle superfici lorde di tutti i piani.]
 
 #c[Superficie utile di un ambito: porzione di superficie di un ambito efficace ai fini della funzionalità richiesta.]
 
-#n[Ad esempio, per _superficie utile delle aperture di ventilazione_ si intende la superficie del varco misurata al netto di eventuali ostruzioni (es. telaio, grata, alette, ...).]
+#nota[Ad esempio, per _superficie utile delle aperture di ventilazione_ si intende la superficie del varco misurata al netto di eventuali ostruzioni (es.~telaio, grata, alette, ...).]
 
-#c[Altezza media di un locale (hm): media pesata delle altezze hi di un locale con la proiezione in pianta della porzione di superficie Ai della superficie di altezza hi:]
+#c[Altezza media di un locale ($h_m$): media pesata delle altezze $h_i$ di un locale con la proiezione in pianta della porzione di superficie $A_i$ della superficie di altezza $h_i$:]
 
-G.1-1 // FIXME mancano figure, controlla anche riferimenti
+$
+  h_m = (sum_i h_i A_i) / (sum_i A_i)
+$
 
-#n[Si riportano esempi nell'illustrazione G.1-1.] // FIXME
+#nota[Si riportano esempi nell'@il_det_altezza_media.]
+
+#figure(
+  grid(
+    columns: (1fr, 1fr, 1fr, 1fr),
+    rows: (2cm, 2cm),
+    column-gutter: 0.1cm,
+    row-gutter: 0.1cm,
+    align: (center + horizon, left + horizon),
+    image("img/altezza-media-sezione-costante.svg"),
+    [$h_m = H$],
+    image("img/altezza-media-sezione-due-altezze.svg"),
+    [$h_m = (H_1 + H_2) / 2$],
+
+    image("img/altezza-media-sezione-circolare.svg"),
+    [$h_m = H + pi R / 4$],
+    image("img/altezza-media-sezione-ponderata.svg"),
+    [$h_m = (H_1 A_1 + H_2 A_2) / (A_1 + A_2)$],
+  ),
+  kind: "illustration",
+  caption: [Esempi di determinazione dell'altezza media, in sezione],
+) <il_det_altezza_media>
 
 #c[Distanza di sicurezza esterna: distanza minima misurata in pianta tra il perimetro di ciascun elemento pericoloso di un'attività ed i seguenti elementi esterni al confine dell'attività e da preservare:
 
   + i confini di aree edificabili,
   + il perimetro del più vicino fabbricato,
-  + il perimetro di altre opere pubbliche o private.]
+  + il perimetro di altre opere pubbliche o private.
+]
 
 #c[Distanza di sicurezza interna: distanza minima misurata in pianta tra i perimetri dei vari elementi pericolosi di un'attività.]
 
@@ -191,9 +216,21 @@ G.1-1 // FIXME mancano figure, controlla anche riferimenti
 
 #c[Distanza di separazione: distanza di sicurezza interna, esterna o di protezione, a seconda dei casi.]
 
-#c[Area di influenza di un elemento: area i cui confini sono ottenuti dalla traslazione (_offset_) su un piano di riferimento dei confini dell'elemento ad una distanza detta _raggio di influenza_ $r_"offset"$.] // FIXME tutti apici e pedici 
+#c[Area di influenza di un elemento: area i cui confini sono ottenuti dalla traslazione (_offset_) su un piano di riferimento dei confini dell'elemento ad una distanza detta _raggio di influenza_ $r_"offset"$.]
 
-#n[Si riportano esempi nell'illustrazione G.1-2.] // FIXME
+#nota[Si riportano esempi nell'@il_costruizione_area_influenza.]
+
+#figure(
+  image("img/costruzione-area-influenza.svg", width: 6cm),
+  kind: "illustration",
+  caption: [Costruzione dell'area di influenza di un elemento, in pianta],
+) <il_costruizione_area_influenza>
+
+#figure(
+  image("img/altezza-antincendio-quote-piano-compartimento.svg", width: 17cm),
+  kind: "illustration",
+  caption: [Esempi di altezza antincendio, quote di piano e di compartimento, in sezione],
+) <il_altezza_antincendio_quote>
 
 === Compartimentazione
 
@@ -205,21 +242,21 @@ G.1-1 // FIXME mancano figure, controlla anche riferimenti
 
 #c[Filtro: compartimento antincendio nel quale la probabilità di avvio e sviluppo dell'incendio sia resa trascurabile.]
 
-#n[Ad esempio, grazie all'assenza di inneschi efficaci ed al ridotto carico di incendio specifico $q_f$.] // FIXME
+#nota[Ad esempio, grazie all'assenza di inneschi efficaci ed al ridotto carico di incendio specifico $q_f$.]
 
 #c[Di tipo protetto (o protetto): qualificazione di un volume dell'attività costituente compartimento antincendio.]
 
-#n[Si riportano alcune esempi di applicazione della definizione: scala protetta, locale protetto, vano protetto, percorso protetto, ...]
+#nota[Si riportano alcune esempi di applicazione della definizione: scala protetta, locale protetto, vano protetto, percorso protetto, ...]
 
-#n[Se non riferito ad un volume dell'attività, il termine assume altri significati, ad esempio soccorritore protetto, materiale protetto, elemento portante protetto, apertura protetta da ostruzione, posizione protetta, ...]
+#nota[Se non riferito ad un volume dell'attività, il termine assume altri significati, ad esempio soccorritore protetto, materiale protetto, elemento portante protetto, apertura protetta da ostruzione, posizione protetta, ...]
 
 #c[Di tipo a prova di fumo (o a prova di fumo): locuzione che indica la capacità di un compartimento di limitare l'ingresso di fumo generato da incendio che si sviluppi in compartimenti comunicanti.]
 
-#n[Si riportano alcuni esempi di applicazione della definizione: scala a prova di fumo, vano a prova di fumo, percorso a prova di fumo, ...]
+#nota[Si riportano alcuni esempi di applicazione della definizione: scala a prova di fumo, vano a prova di fumo, percorso a prova di fumo, ...]
 
 #c[Di tipo esterno (o esterno): qualificazione di una porzione dell'attività esterna all'opera da costruzione, con caratteristiche tali da contrastare temporaneamente la propagazione dell'incendio proveniente dall'opera da costruzione.]
 
-#n[Si riportano alcuni esempi di applicazione della definizione: scala esterna, percorso esterno, ...]
+#nota[Si riportano alcuni esempi di applicazione della definizione: scala esterna, percorso esterno, ...]
 
 #c[Intercapedine antincendio: vano di distacco, adeguatamente dimensionato per l'aerazione, la ventilazione o lo smaltimento dei prodotti della combustione, superiormente delimitato da spazio scoperto e longitudinalmente delimitato da muri perimetrali (con o senza aperture) appartenenti all'opera da costruzione servita e da terrapieno o da muri di altra opera da costruzione, aventi pari resistenza al fuoco.]
 
@@ -227,18 +264,13 @@ G.1-1 // FIXME mancano figure, controlla anche riferimenti
 
 #c[Sistema d'esodo: insieme delle misure di salvaguardia della vita che consentono agli _occupanti_ di raggiungere un _luogo sicuro_ o permanere al sicuro, autonomamente o con assistenza, prima che l'incendio determini condizioni _incapacitanti_ negli ambiti dell'attività ove si trovano.]
 
-#n[Gli occupanti raggiungono l'_incapacitazione_ quando diventano inabili a mettersi al sicuro a causa degli effetti dell'incendio (capitolo Errore: sorgente del riferimento non trovata).] // FIXME controlla tutti i collegamenti
+#nota[Gli occupanti raggiungono l'_incapacitazione_ quando diventano inabili a mettersi al sicuro a causa degli effetti dell'incendio (@ch_fse_vita).]
 
-#n[Il sistema d'esodo è costituito da _luoghi sicuri_, _vie d'esodo_, _uscite_, _porte_, _illuminazione di sicurezza_, _segnaletica_, ...]
+#nota[Il sistema d'esodo è costituito da _luoghi sicuri_, _vie d'esodo_, _uscite_, _porte_, _illuminazione di sicurezza_, _segnaletica_, ...]
 
 #c[Luogo sicuro: luogo in cui è _permanentemente_ trascurabile il rischio d'incendio per gli occupanti che vi stazionano o vi transitano; tale rischio è riferito ad un incendio nell'attività.]
 
 #c[Luogo sicuro temporaneo: luogo in cui è _temporaneamente_ trascurabile il rischio d'incendio per gli occupanti che vi stazionano o vi transitano durante l'esodo; tale rischio è riferito ad un incendio in ambiti dell'attività specificati, diversi dal luogo considerato.]
-
-// FIXME keep nota with previous paragraph
-// FIXME check line thickness
-// FIXME keep es. with following text
-// FIXME check links between chapters
 
 #c[Spazio calmo: _luogo sicuro temporaneo_ ove gli occupanti possono attendere e ricevere _assistenza_ per completare l'esodo verso luogo sicuro.]
 
@@ -250,11 +282,11 @@ G.1-1 // FIXME mancano figure, controlla anche riferimenti
 
 #c[Via d'esodo orizzontale: porzione di via d'esodo a quota costante o con pendenza ≤ 5%.]
 
-#n[Ad esempio: corridoi, porte, uscite, ...]
+#nota[Ad esempio: corridoi, porte, uscite, ...]
 
 #c[Via d'esodo verticale: porzione di via d'esodo che consente agli occupanti variazioni di quota con pendenza > 5%.]
 
-#n[Ad esempio: scale, rampe, ...]
+#nota[Ad esempio: scale, rampe, ...]
 
 #c[Scala d'esodo: scala appartenente al sistema d'esodo.]
 
@@ -262,7 +294,7 @@ G.1-1 // FIXME mancano figure, controlla anche riferimenti
 
 #c[Percorso d'esodo: parte di via d'esodo che conduce dall'uscita dei locali dedicati all'attività fino all'uscita finale.]
 
-#n[Il percorso d'esodo non comprende i locali dedicati all'attività ed è costituito da corridoi, scale, rampe, atri, passerelle, camminamenti, ...]
+#nota[Il percorso d'esodo non comprende i locali dedicati all'attività ed è costituito da corridoi, scale, rampe, atri, passerelle, camminamenti, ...]
 
 #c[Uscita di piano: varco del sistema di esodo che immette in via d'esodo verticale da una via d'esodo orizzontale.]
 
@@ -275,21 +307,21 @@ G.1-1 // FIXME mancano figure, controlla anche riferimenti
   + un punto in cui diventa possibile l'esodo in più di una direzione,
   + oppure un _luogo sicuro_.
 
-La lunghezza di corridoio cieco è valutata con il metodo del filo teso senza tenere conto degli arredi mobili.]
+  La lunghezza di corridoio cieco è valutata con il metodo del filo teso senza tenere conto degli arredi mobili.]
 
-#n[L'incendio lungo il _corridoio cieco_ può impedire l'esodo degli occupanti. Poiché non è possibile stabilire a priori il compartimento di primo innesco, il _corridoio cieco_ è indipendente dai compartimenti eventualmente attraversati.]
+#nota[L'incendio lungo il _corridoio cieco_ può impedire l'esodo degli occupanti. Poiché non è possibile stabilire a priori il compartimento di primo innesco, il _corridoio cieco_ è indipendente dai compartimenti eventualmente attraversati.]
 
 #c[Lunghezza d'esodo: distanza che ciascun occupante deve percorrere lungo una via d'esodo dal punto in cui si trova fino a raggiungere un _luogo sicuro temporaneo_ oppure un _luogo sicuro_.
 
-La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto degli arredi mobili.]
+  La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto degli arredi mobili.]
 
-#n[Ad esempio, la _lunghezza d'esodo_ è usata per limitare il tempo che gli occupanti impiegano per abbandonare qualsiasi compartimento di primo innesco dell'attività.]
+#nota[Ad esempio, la _lunghezza d'esodo_ è usata per limitare il tempo che gli occupanti impiegano per abbandonare qualsiasi compartimento di primo innesco dell'attività.]
 
-#c[Larghezza unitaria delle vie d'esodo (o larghezza unitaria): indice quantitativo della potenzialità di una via d'esodo in relazione al profilo di rischio Rvita dell'attività. È convenzionalmente espressa dalla larghezza in millimetri necessaria all'esodo di un singolo occupante (mm/persona).]
+#c[Larghezza unitaria delle vie d'esodo (o larghezza unitaria): indice quantitativo della potenzialità di una via d'esodo in relazione al profilo di rischio #Rvita dell'attività. È convenzionalmente espressa dalla larghezza in millimetri necessaria all'esodo di un singolo occupante (mm/persona).]
 
 #c[Esodo simultaneo: modalità di esodo che prevede lo spostamento contemporaneo degli occupanti fino a _luogo sicuro_.]
 
-#n[L'attivazione della procedura di esodo segue immediatamente la rivelazione dell'incendio oppure è differita dopo verifica da parte degli occupanti dell'effettivo innesco dell'incendio.]
+#nota[L'attivazione della procedura di esodo segue immediatamente la rivelazione dell'incendio oppure è differita dopo verifica da parte degli occupanti dell'effettivo innesco dell'incendio.]
 
 #c[Esodo per fasi: modalità di esodo di una struttura organizzata con più compartimenti, in cui l'evacuazione degli occupanti fino a _luogo sicuro_ avviene in successione dopo l'evacuazione del compartimento di primo innesco. Si attua con l'ausilio di _misure antincendio_ di protezione attiva, passiva e gestionali.]
 
@@ -331,11 +363,11 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[Elemento chiave: elemento dalla cui stabilità dipende la stabilità del rimanente aggregato strutturale. Il collasso di un elemento chiave determina un danneggiamento strutturale ritenuto sproporzionato.]
 
-#c[Robustezza: attitudine di una struttura a resistere ad azioni eccezionali (es. esplosioni, ...) senza che si determinino danneggiamenti sproporzionati rispetto alla causa.]
+#c[Robustezza: attitudine di una struttura a resistere ad azioni eccezionali (es.~esplosioni, ...) senza che si determinino danneggiamenti sproporzionati rispetto alla causa.]
 
 === Resistenza al fuoco
 
-#c[Resistenza al fuoco: una delle _misure antincendio_ di protezione da perseguire per garantire un adeguato livello di sicurezza di un'opera da costruzione in condizioni di incendio. Essa riguarda la capacità portante in caso di incendio, per una struttura, per una parte della struttura o per un elemento strutturale nonché la capacità di compartimentazione in caso di incendio per gli elementi di separazione strutturali (es. muri, solai, ...) e non strutturali (es. porte, divisori, ...).]
+#c[Resistenza al fuoco: una delle _misure antincendio_ di protezione da perseguire per garantire un adeguato livello di sicurezza di un'opera da costruzione in condizioni di incendio. Essa riguarda la capacità portante in caso di incendio, per una struttura, per una parte della struttura o per un elemento strutturale nonché la capacità di compartimentazione in caso di incendio per gli elementi di separazione strutturali (es.~muri, solai, ...) e non strutturali (es.~porte, divisori, ...).]
 
 #c[Capacità portante in caso di incendio: attitudine della struttura, di una parte della struttura o di un elemento strutturale, a conservare una sufficiente resistenza meccanica sotto l'azione del fuoco, tenendo conto delle altre azioni agenti.]
 
@@ -352,13 +384,14 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 #c[Incendio convenzionale di progetto: incendio definito attraverso una curva di incendio che rappresenta l'andamento, in funzione del tempo, della temperatura media dei gas di combustione nell'intorno della superficie degli elementi costruttivi. La curva di incendio di progetto può essere:
 
   + nominale: curva adottata per la classificazione delle opere da costruzione e per le verifiche di resistenza al fuoco di tipo convenzionale;
-  + naturale: curva determinata in base a modelli d'incendio e a parametri fisici che definiscono le variabili di stato all'interno del compartimento antincendio.]
+  + naturale: curva determinata in base a modelli d'incendio e a parametri fisici che definiscono le variabili di stato all'interno del compartimento antincendio.
+]
 
 #c[Incendio localizzato: focolaio d'incendio che interessa una zona limitata del compartimento antincendio, con sviluppo di calore concentrato in prossimità degli elementi costruttivi posti superiormente al focolaio o immediatamente adiacenti.]
 
 #c[Fascicolo tecnico (per la resistenza al fuoco): documento predisposto dal Produttore in caso di variazioni del prodotto o dell'elemento costruttivo classificato, non previste dal campo di diretta applicazione del risultato di prova.]
 
-#c[Elementi non portanti di opere da costruzione: elementi strutturali che, nella combinazione di carico eccezionale per le verifiche strutturali antincendio, così come da NTC, sono sottoposti al solo peso proprio ed all'azione termica dovuta all'esposizione al fuoco. Fanno eccezione quegli elementi che concorrono alla definizione del metodo di analisi strutturale (es. controventi verticali nei telai a nodi fissi).]
+#c[Elementi non portanti di opere da costruzione: elementi strutturali che, nella combinazione di carico eccezionale per le verifiche strutturali antincendio, così come da NTC, sono sottoposti al solo peso proprio ed all'azione termica dovuta all'esposizione al fuoco. Fanno eccezione quegli elementi che concorrono alla definizione del metodo di analisi strutturale (es.~controventi verticali nei telai a nodi fissi).]
 
 #c[Elementi strutturali principali: elementi strutturali il cui cedimento per effetto dell'incendio comprometta almeno una delle seguenti capacità:
 
@@ -366,13 +399,14 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
   + efficacia di elementi costruttivi di compartimentazione;
   + funzionamento dei sistemi di protezione attiva;
   + esodo in sicurezza degli occupanti;
-  + sicurezza dei soccorritori.]
+  + sicurezza dei soccorritori.
+]
 
 #c[Elementi strutturali secondari: tutti gli elementi strutturali non _principali_.]
 
 #c[Strutture vulnerabili in condizioni di incendio: strutture, solitamente di tipo leggero, che per loro natura risultano particolarmente sensibili all'azione del fuoco.]
 
-#n[Tipici esempi di sistemi costruttivi vulnerabili nei confronti dell'incendio sono: tensostrutture, strutture pressostatiche, strutture strallate, membrane a doppia o semplice curvatura, coperture geodetiche, strutture in lega di alluminio, allestimenti temporanei in tubo e giunto, tunnel mobili, ...]
+#nota[Tipici esempi di sistemi costruttivi vulnerabili nei confronti dell'incendio sono: tensostrutture, strutture pressostatiche, strutture strallate, membrane a doppia o semplice curvatura, coperture geodetiche, strutture in lega di alluminio, allestimenti temporanei in tubo e giunto, tunnel mobili, ...]
 
 === Reazione al fuoco
 
@@ -414,9 +448,9 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[Sistema di allarme vocale per scopi di emergenza (EVAC): impianto destinato principalmente a diffondere informazioni vocali per la salvaguardia della vita durante un'emergenza.]
 
-#c[Specifica d'impianto: documento di sintesi dei dati tecnici che descrivono le prestazioni dell'impianto di protezione attiva contro l'incendio, le sue caratteristiche dimensionali (es. portate specifiche, pressioni operative, caratteristiche e durata dell'alimentazione dell'agente estinguente, estensione dettagliata dell'impianto, ...) e le caratteristiche dei componenti da impiegare nella sua realizzazione (es. tubazioni, erogatori, sensori, riserve di agente estinguente, aperture di evacuazione, aperture di afflusso, ...). La specifica comprende il richiamo della norma di progettazione che si intende applicare, la classificazione del livello di pericolosità, ove previsto, lo schema a blocchi e gli schemi funzionali dell'impianto che si intende realizzare, nonché l'attestazione dell'idoneità in relazione al pericolo di incendio presente nell'attività.]
+#c[Specifica d'impianto: documento di sintesi dei dati tecnici che descrivono le prestazioni dell'impianto di protezione attiva contro l'incendio, le sue caratteristiche dimensionali (es.~portate specifiche, pressioni operative, caratteristiche e durata dell'alimentazione dell'agente estinguente, estensione dettagliata dell'impianto, ...) e le caratteristiche dei componenti da impiegare nella sua realizzazione (es.~tubazioni, erogatori, sensori, riserve di agente estinguente, aperture di evacuazione, aperture di afflusso, ...). La specifica comprende il richiamo della norma di progettazione che si intende applicare, la classificazione del livello di pericolosità, ove previsto, lo schema a blocchi e gli schemi funzionali dell'impianto che si intende realizzare, nonché l'attestazione dell'idoneità in relazione al pericolo di incendio presente nell'attività.]
 
-#n[Generalmente, le norme adottate dall'ente di normazione nazionale riportano le indicazioni minime dei contenuti della documentazione per la fase preliminare e per la fase definitiva di progetto di un impianto di protezione attiva; i contenuti minimi della specifica di impianto possono essere i medesimi richiesti dalla norma tecnica applicata nella fase di progetto preliminare.]
+#nota[Generalmente, le norme adottate dall'ente di normazione nazionale riportano le indicazioni minime dei contenuti della documentazione per la fase preliminare e per la fase definitiva di progetto di un impianto di protezione attiva; i contenuti minimi della specifica di impianto possono essere i medesimi richiesti dalla norma tecnica applicata nella fase di progetto preliminare.]
 
 #c[Modifica sostanziale dell'impianto: trasformazione della tipologia originale dell'impianto di protezione attiva contro l'incendio o ampliamento della sua dimensione tipica oltre il 50% dell'originale, ove non diversamente definito da specifica regolamentazione o norma.]
 
@@ -424,16 +458,14 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[Dimensione tipica dell'impianto:
 
-  + per la rete idranti si applica quanto riportato dalla norma adottata dall'Ente di normazione nazionale;]
-
-#n[L'elenco, non esaustivo, delle norme adottate dall'ente di normazione nazionale è reperibile nel paragrafo Errore: sorgente del riferimento non trovata.]
-
-// FIXME cerca tutti Errore: sorgente del riferimento non trovata.
-
-#c[  + per gli impianti di rivelazione ed allarme incendio s'intende il numero di rivelatori automatici o di punti di segnalazione manuale;
+  + per la rete idranti si applica quanto riportato dalla norma adottata dall'Ente di normazione nazionale;
+  + per gli impianti di rivelazione ed allarme incendio s'intende il numero di rivelatori automatici o di punti di segnalazione manuale;
   + per gli impianti di estinzione o controllo si intende il numero di erogatori;
-  + per gli impianti di estinzione di tipo speciale (es. estinguenti gassosi, schiuma, polvere, ...) si intende la quantità di agente estinguente;
-  + per gli impianti di controllo del fumo e del calore si intende la superficie utile totale di evacuazione per i sistemi di evacuazione naturale e la portata volumetrica aspirata per i sistemi di evacuazione forzata.]
+  + per gli impianti di estinzione di tipo speciale (es.~estinguenti gassosi, schiuma, polvere, ...) si intende la quantità di agente estinguente;
+  + per gli impianti di controllo del fumo e del calore si intende la superficie utile totale di evacuazione per i sistemi di evacuazione naturale e la portata volumetrica aspirata per i sistemi di evacuazione forzata.
+]
+
+#nota[L'elenco, non esaustivo, delle norme adottate dall'ente di normazione nazionale è reperibile nel @ch_controllo_incendio_riferimenti.]
 
 #c[Regola dell'arte: stadio dello sviluppo raggiunto in un determinato momento storico dalle capacità tecniche relative a prodotti, processi o servizi, basato su comprovati risultati scientifici, tecnologici o sperimentali. Fermo restando il rispetto delle disposizioni legislative e regolamentari applicabili, la presunzione di regola dell'arte è riconosciuta, di prassi, alle norme adottate da Enti di normazione nazionali, europei o internazionali.]
 
@@ -443,7 +475,7 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[Sistema o impianto a disponibilità superiore: sistema o impianto dotato di un livello di _disponibilità_ più elevato rispetto a quello minimo previsto dalle norme di riferimento del sistema o dell'impianto.]
 
-#n[La definizione di _disponibilità (availability)_ è riportata nella norma UNI EN 13306. Le modalità per progettare e realizzare sistemi o impianti a disponibilità superiore sono descritte nel capitolo Errore: sorgente del riferimento non trovata.] // FIXME
+#nota[La definizione di _disponibilità (availability)_ è riportata nella norma UNI EN 13306. Le modalità per progettare e realizzare sistemi o impianti a disponibilità superiore sono descritte nel @ch_progettazione.]
 
 === Operatività antincendio
 
@@ -453,11 +485,17 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[Percorso d'accesso ai piani per soccorritori: percorso che conduce dal piano d'accesso per soccorritori fino ad uno o più ingressi di ciascun piano delle opere da costruzione dell'attività. Gli ingressi selezionati devono consentire ai soccorritori di raggiungere tutti i locali dell'attività.]
 
+#figure(
+  image("img/percorsi-accesso-piani-soccorritori.svg", width: 12cm),
+  kind: "illustration",
+  caption: [Percorsi d'accesso ai piani per soccorritori (linee piene); gli ingressi di piano consentono ai soccorritori di raggiungere tutti i locali (linee tratteggiate)],
+) <il_percorsi_accesso_soccorritori>
+
 === Aree a rischio specifico
 
 #c[Area a rischio specifico: ambito dell'attività caratterizzato da rischio di incendio sostanzialmente differente rispetto a quello tipico dell'attività.]
 
-#n[L'individuazione delle aree a rischio specifico è effettuata dal progettista secondo i criteri del capitolo Errore: sorgente del riferimento non trovata oppure è riportata nella regole tecniche verticali.] // FIXME
+#nota[L'individuazione delle aree a rischio specifico è effettuata dal progettista secondo i criteri del @ch_aree_a_rischio_specifico oppure è riportata nella regole tecniche verticali.]
 
 === Sostanze e miscele pericolose
 
@@ -477,17 +515,17 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[Funzionamento normale: stato in cui si trovano apparecchi, sistemi di protezione e componenti che svolgono la loro funzione prevista all'interno dei rispettivi parametri di progettazione.]
 
-#n[Emissioni minime di materiale infiammabile possono far parte del funzionamento normale. Si considerano emissioni minime, per esempio, il rilascio di sostanze da organi di tenuta basati sull'azione umettante del fluido pompato. Guasti che richiedono la riparazione o l'arresto (es. la rottura dei giunti di una pompa, delle guarnizioni a flangia o perdite di sostanze causate da incidenti) non sono considerati parte del funzionamento normale.]
+#nota[Emissioni minime di materiale infiammabile possono far parte del funzionamento normale. Si considerano emissioni minime, per esempio, il rilascio di sostanze da organi di tenuta basati sull'azione umettante del fluido pompato. Guasti che richiedono la riparazione o l'arresto (es.~la rottura dei giunti di una pompa, delle guarnizioni a flangia o perdite di sostanze causate da incidenti) non sono considerati parte del funzionamento normale.]
 
 #c[Malfunzionamento: stato in cui apparecchi, sistemi di protezione o componenti non svolgono la funzione prevista.]
 
-#n[Un malfunzionamento può accadere per diverse ragioni, tra cui: la variazione di una caratteristica o di una dimensione del materiale o del pezzo lavorato, il guasto di uno o più elementi costitutivi di apparecchi, sistemi di protezione e componenti, per effetto di disturbi di origine esterna (es. urti, vibrazioni, campi elettromagnetici), per un errore o un'imperfezione nella progettazione (es. errori nel software), per effetto di un disturbo dell'alimentazione di energia o di altri servizi; per la perdita di controllo da parte dell'operatore (specialmente per le macchine a funzionamento manuale).]
+#nota[Un malfunzionamento può accadere per diverse ragioni, tra cui: la variazione di una caratteristica o di una dimensione del materiale o del pezzo lavorato, il guasto di uno o più elementi costitutivi di apparecchi, sistemi di protezione e componenti, per effetto di disturbi di origine esterna (es.~urti, vibrazioni, campi elettromagnetici), per un errore o un'imperfezione nella progettazione (es.~errori nel software), per effetto di un disturbo dell'alimentazione di energia o di altri servizi; per la perdita di controllo da parte dell'operatore (specialmente per le macchine a funzionamento manuale).]
 
-#c[Malfunzionamento previsto: malfunzionamento (es. disturbi o guasti) di apparecchi, sistemi di protezione o componenti, che è noto si verifichi durante il normale utilizzo.]
+#c[Malfunzionamento previsto: malfunzionamento (es.~disturbi o guasti) di apparecchi, sistemi di protezione o componenti, che è noto si verifichi durante il normale utilizzo.]
 
 #c[Malfunzionamento raro: tipo di malfunzionamento che è noto possa accadere, ma solo in rari casi.]
 
-#n[Ad esempio, due malfunzionamenti previsti indipendenti che separatamente non creerebbero il pericolo di accensione, ma che in combinazione creano il pericolo di accensione, sono considerati come un malfunzionamento raro.]
+#nota[Ad esempio, due malfunzionamenti previsti indipendenti che separatamente non creerebbero il pericolo di accensione, ma che in combinazione creano il pericolo di accensione, sono considerati come un malfunzionamento raro.]
 
 === Alimentazioni elettriche
 
@@ -495,9 +533,9 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[Alimentazione di sicurezza: sistema elettrico inteso a garantire l'alimentazione di apparecchi utilizzatori o parti dell'impianto elettrico necessari per la sicurezza delle persone.]
 
-#n[L'alimentazione di sicurezza risulta essere necessaria per alimentare gli impianti significativi ai fini della gestione della sicurezza antincendio e dell'emergenza, quali ad esempio illuminazione di sicurezza, gruppi di pompaggio antincendio, sistemi estrazione fumo, sistemi elettrici di ripristino delle compartimentazioni, impianti di rivelazione di sostanze o miscele pericolose, ascensori antincendio, ...]
+#nota[L'alimentazione di sicurezza risulta essere necessaria per alimentare gli impianti significativi ai fini della gestione della sicurezza antincendio e dell'emergenza, quali ad esempio illuminazione di sicurezza, gruppi di pompaggio antincendio, sistemi estrazione fumo, sistemi elettrici di ripristino delle compartimentazioni, impianti di rivelazione di sostanze o miscele pericolose, ascensori antincendio, ...]
 
-#n[I sistemi di sicurezza e gli impianti dotati di alimentazione elettrica di sicurezza sono normalmente alimentati da una sorgente di alimentazione ordinaria che, in caso di indisponibilità o in situazioni di emergenza, viene sostituita automaticamente dalla sorgente di alimentazione di sicurezza.]
+#nota[I sistemi di sicurezza e gli impianti dotati di alimentazione elettrica di sicurezza sono normalmente alimentati da una sorgente di alimentazione ordinaria che, in caso di indisponibilità o in situazioni di emergenza, viene sostituita automaticamente dalla sorgente di alimentazione di sicurezza.]
 
 #c[Alimentazione di riserva: sistema elettrico inteso a garantire l'alimentazione di apparecchi utilizzatori o di parti di impianto per motivi diversi dalla sicurezza delle persone.]
 
@@ -505,7 +543,7 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[Ascensore antincendio: ascensore installato principalmente per uso degli occupanti, munito di ulteriori protezioni, comandi e segnalazioni che lo rendono in grado di essere impiegato, sotto il controllo delle squadre di soccorso, anche in caso di incendio.]
 
-#n[Ad esempio, l'ascensore antincendio può essere impiegato, anche in caso di incendio, per l'evacuazione assistita di occupanti con ridotte o impedite capacità motorie.]
+#nota[Ad esempio, l'ascensore antincendio può essere impiegato, anche in caso di incendio, per l'evacuazione assistita di occupanti con ridotte o impedite capacità motorie.]
 
 #c[Ascensore di soccorso: ascensore utilizzabile in caso di incendio, installato esclusivamente per il trasporto delle attrezzature di servizio antincendio ed, eventualmente, per l'evacuazione di emergenza degli occupanti.]
 
@@ -513,7 +551,7 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 === Ingegneria della sicurezza antincendio
 
-#c[Ingegneria della sicurezza antincendio (metodo prestazionale, _fire safety engineering_, FSE): applicazione di principi ingegneristici, di regole e di giudizi esperti basati sulla valutazione scientifica del fenomeno della combustione, degli effetti dell'incendio e del comportamento umano, finalizzati alla tutela della vita umana, alla protezione dei beni e dell'ambiente, alla quantificazione dei rischi di incendio e dei relativi effetti ed alla valutazione analitica delle misure antincendio ottimali, necessarie a limitare entro livelli prestabiliti le conseguenze dell'incendio, secondo le indicazioni del capitolo Errore: sorgente del riferimento non trovata.] // FIXME
+#c[Ingegneria della sicurezza antincendio (metodo prestazionale, _fire safety engineering_, FSE): applicazione di principi ingegneristici, di regole e di giudizi esperti basati sulla valutazione scientifica del fenomeno della combustione, degli effetti dell'incendio e del comportamento umano, finalizzati alla tutela della vita umana, alla protezione dei beni e dell'ambiente, alla quantificazione dei rischi di incendio e dei relativi effetti ed alla valutazione analitica delle misure antincendio ottimali, necessarie a limitare entro livelli prestabiliti le conseguenze dell'incendio, secondo le indicazioni del @ch_fse.]
 
 #c[Scenario d'incendio: descrizione completa ed univoca dell'evoluzione dell'incendio in relazione ai suoi tre aspetti fondamentali: focolare, attività ed occupanti.]
 
@@ -529,89 +567,79 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[Tolleranza: differenza in valore assoluto tra la misurazione effettuata in sito e la corrispondente misura progettuale.]
 
-#n[Ad esempio: larghezza vano di progetto 120 cm, larghezza vano eseguito 122 cm, tolleranza 2 cm. La _tolleranza_ non deve essere confusa con la _precisione_ dello strumento impiegato per la misura. Per definizione, la tolleranza non può essere già impiegata in fase progettuale.]
+#nota[Ad esempio: larghezza vano di progetto 120 cm, larghezza vano eseguito 122 cm, tolleranza 2 cm. La _tolleranza_ non deve essere confusa con la _precisione_ dello strumento impiegato per la misura. Per definizione, la tolleranza non può essere già impiegata in fase progettuale.]
 
 #c[Tolleranza ammissibile: valore ammissibile della tolleranza stabilito in forza di una norma o di una regola tecnica o, in assenza, dal progettista.]
 
-#c[Valori delle tolleranze ammissibili: salvo indicazioni specifiche da parte di norme, specificazioni tecniche o regole tecniche, le tolleranze ammissibili per le misure di vario tipo, ai fini dell'applicazione del presente documento, sono riportate in tabella G.1-1.] // FIXME
+#c[Valori delle tolleranze ammissibili: salvo indicazioni specifiche da parte di norme, specificazioni tecniche o regole tecniche, le tolleranze ammissibili per le misure di vario tipo, ai fini dell'applicazione del presente documento, sono riportate nella @ta_tolleranze.]
 
 #figure(
   table(
-      columns: (1fr, 1.8fr, 1fr),
-      align: (left, left, center),
-      inset: 6pt,
-      stroke: 0.5pt,
-      table.header(
-        table-heading(colspan: 2)[Grandezza misurata],
-        table-heading[Tolleranza ammissibile],
-      ),
-      table.cell(rowspan: 2)[Lunghezza [1], [2]],
-      [≤ 2,40 m],
-      [±5%],
-      [per la porzione eccedente la lunghezza di 2,40 m],
-      [±2%],
-      table.cell(colspan: 2)[Superficie, volume, illuminamento, tempo, massa, temperatura, portata [1]],
-      [±5%],
-      table.cell(colspan: 2)[Pressione [1]],
-      [±5%],
-      table.cell(colspan: 3, align: left)[
-        [1] Si intendono le grandezze definite nel Sistema internazionale di misura. \
-        [2] I valori della tolleranza ammissibile si applicano anche alle misure lineari che concorrono alla determinazione della pendenza delle rampe.
-      ],
+    columns: (1fr, 2fr, 1fr),
+    align: (left + horizon, left + horizon, center + horizon),
+    table.header(table-heading(colspan: 2)[Grandezza misurata], table-heading[Tolleranza ammissibile]),
+    table.cell(rowspan: 2)[Lunghezza [1], [2]],
+    [≤ 2,40 m],
+    [±5%],
+    [per la porzione eccedente la lunghezza di 2,40 m],
+    [±2%],
+    table.cell(colspan: 2)[Superficie, volume, illuminamento, tempo, massa, temperatura, portata [1]],
+    [±5%],
+    table.cell(colspan: 2)[Pressione [1]],
+    [±5%],
+    table.cell(colspan: 3, align: left)[
+      [1] Si intendono le grandezze definite nel Sistema internazionale di misura. \
+      [2] I valori della tolleranza ammissibile si applicano anche alle misure lineari che concorrono alla determinazione della pendenza delle rampe.
+    ],
   ),
   kind: "table",
   caption: [Tolleranze ammissibili per grandezza misurata],
-)
+) <ta_tolleranze>
 
 === Simboli grafici
 
-#c[Nell'esecuzione degli elaborati tecnici il progettista impiega i simboli grafici della norma UNI EN ISO 7010, oppure quelli contenuti nelle tabelle G.1-2 ed G.1-3. Tale simbologia può essere integrata da indicazioni di maggiore dettaglio, utili alla definizione di specifici aspetti antincendio.]  // FIXME
+#c[Nell'esecuzione degli elaborati tecnici il progettista impiega i simboli grafici della norma UNI EN ISO 7010, oppure quelli contenuti nella @ta_simboli_grafici_1 e nella @ta_simboli_grafici_2. Tale simbologia può essere integrata da indicazioni di maggiore dettaglio, utili alla definizione di specifici aspetti antincendio.]
 
-#n[Ad esempio: dimensioni utili delle porte, presenza di ritegni elettromeccanici, coefficienti k degli erogatori, tipologia dei dispositivi di apertura delle porte, tipologia di rivelatori antincendio, temperature di attivazione di sensori, tipologie di erogatori ad attivazione automatica, ...]
+#nota[Ad esempio: dimensioni utili delle porte, presenza di ritegni elettromeccanici, coefficienti k degli erogatori, tipologia dei dispositivi di apertura delle porte, tipologia di rivelatori antincendio, temperature di attivazione di sensori, tipologie di erogatori ad attivazione automatica, ...]
 
 #c[Qualora sia necessario impiegare ulteriore simbologia per elementi ritenuti significativi ai fini della sicurezza antincendio, tale simbologia deve essere chiaramente riportata nella legenda degli elaborati tecnici.]
 
 #figure(
   table(
-      columns: (1fr, 1fr, 3fr),
-      inset: 6pt,
-      stroke: 0.5pt,
-      table.header(
-        table-heading[Tipologia],
-        table-heading[Simbolo],
-        table-heading[Descrizione],
-      ),
+    columns: (1fr, 1fr, 3fr),
+    align: (left + horizon, center + horizon, left + horizon),
+    table.header(table-heading[Tipologia], table-heading[Simbolo], table-heading[Descrizione]),
     [Elementi costruttivi \ e relative aperture],
-    align(center)[#image("img/simboli/porta-rf.png", width: 1.4cm)],
+    image("img/simbolo-porta-rf.svg"),
     [Porta resistente al fuoco. \ Per tali porte la sporgenza indica il verso di apertura [1].],
     [Distanziamenti],
-    align(center)[#image("img/simboli/distanza.jpg", width: 1.4cm)],
+    image("img/simbolo-distanza.svg"),
     [Distanza di separazione [2]],
     table.cell(rowspan: 3)[Vie d'esodo],
-    align(center)[#image("img/simboli/esodo-alto.png", width: 1.4cm)],
+    image("img/simbolo-esodo-alto.svg"),
     [Porzione della via di esodo verso l'alto],
-    align(center)[#image("img/simboli/esodo-orizzontale.png", width: 1.4cm)],
+    image("img/simbolo-esodo-orizzontale.svg"),
     [Porzione della via di esodo orizzontale],
-    align(center)[#image("img/simboli/esodo-basso.jpg", height: 0.8cm)],
+    image("img/simbolo-esodo-basso.svg"),
     [Porzione della via di esodo verso il basso],
     table.cell(rowspan: 2)[Estintori],
-    align(center)[#image("img/simboli/estintore-portatile.png", height: 0.8cm)],
+    image("img/simbolo-estintore-portatile.svg"),
     [Estintore portatile [3]],
-    align(center)[#image("img/simboli/estintore-carrellato.png", width: 1.3cm)],
+    image("img/simbolo-estintore-carrellato.svg"),
     [Estintore carrellato [3]],
     table.cell(rowspan: 5)[Sistemi idrici \ antincendio],
-    align(center)[#image("img/simboli/naspo.jpg", height: 0.8cm)],
+    image("img/simbolo-naspo.svg"),
     [Naspo],
-    align(center)[#image("img/simboli/idrante-muro.jpg", height: 0.8cm)],
+    image("img/simbolo-idrante-muro.svg"),
     [Idrante a muro],
-    align(center)[#image("img/simboli/idrante-sottosuolo.jpg", height: 0.8cm)],
+    image("img/simbolo-idrante-sottosuolo.svg"),
     [Idrante sottosuolo [4]],
-    align(center)[#image("img/simboli/idrante-colonna.jpg", height: 0.8cm)],
+    image("img/simbolo-idrante-colonna.svg"),
     [Idrante a colonna soprassuolo [4]],
-    align(center)[#image("img/simboli/attacco-autopompa.jpg", height: 0.8cm)],
+    image("img/simbolo-attacco-autopompa.svg"),
     [Attacco di mandata per autopompa [5]],
     table.cell(colspan: 3, align: left)[
-      [1] Accanto al simbolo grafico devono indicarsi il simbolo e la classe di resistenza al fuoco (es. EI 120-Sa). \
+      [1] Accanto al simbolo grafico devono indicarsi il simbolo e la classe di resistenza al fuoco (es.~EI 120-$"S"_"a"$). \ // FIXME macro resist fuoco?
       [2] Deve essere specificato, anche tramite colori, se la distanza è esterna, interna o di protezione. \
       [3] Accanto al simbolo grafico devono essere indicate le classi di spegnimento dell'estintore. \
       [4] Accanto al simbolo grafico devono essere indicati il diametro e il numero degli attacchi di uscita. \
@@ -619,37 +647,32 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
     ],
   ),
   kind: "table",
-  caption: [Simboli grafici], // FIXME immagini
-)
+  caption: [Simboli grafici],
+) <ta_simboli_grafici_1>
 
 #figure(
   table(
     columns: (1fr, 1fr, 3fr),
-    inset: 6pt,
-    stroke: 0.5pt,
-    table.header(
-      table-heading[Tipologia],
-      table-heading[Simbolo],
-      table-heading[Descrizione],
-    ),
+    align: (left + horizon, center + horizon, left + horizon),
+    table.header(table-heading[Tipologia], table-heading[Simbolo], table-heading[Descrizione]),
     table.cell(rowspan: 2)[Sistemi di \ segnalazione],
-    align(center)[#image("img/simboli/pulsante-allarme.png", height: 0.8cm)],
+    image("img/simbolo-pulsante-allarme.svg"),
     [Pulsante di allarme],
-    align(center)[#image("img/simboli/rivelatore-incendio.png", width: 1.4cm)],
+    image("img/simbolo-rivelatore-incendio.svg"),
     [Rivelatore di incendio (o rivelatore) [1]],
     table.cell(rowspan: 2)[Impianti fissi di \ estinzione],
-    align(center)[#image("img/simboli/erogatore-automatico.png", height: 0.8cm)],
+    image("img/simbolo-erogatore-automatico.svg"),
     [Erogatore di impianto ad attivazione automatica [2]],
-    align(center)[#image("img/simboli/erogatore-manuale.png", height: 0.8cm)],
+    image("img/simbolo-erogatore-manuale.svg"),
     [Erogatore di impianto ad attivazione manuale [2]],
     table.cell(colspan: 3, align: left)[
-      [1] All’interno del cerchio deve essere riportato il simbolo del tipo di rivelatore. 
+      [1] All’interno del cerchio deve essere riportato il simbolo del tipo di rivelatore.
       [2] All’interno del cerchio e del quadrato deve essere riportato un simbolo rappresentativo della sostanza estinguente (da richiamare in legenda).
     ],
   ),
   kind: "table",
-  caption: [Simboli grafici], // FIXME immagini
-)
+  caption: [Simboli grafici],
+) <ta_simboli_grafici_2>
 
 === Sigle
 
@@ -741,24 +764,24 @@ La lunghezza d'esodo è valutata con il metodo del filo teso senza tenere conto 
 
 #c[UEL: Limite superiore di esplosività, _Upper Explosive Limit_.]
 
-=== Linguaggio
+=== Linguaggio <ch_definizioni_linguaggio>
 
 #c[Nel documento è impiegato il seguente linguaggio.]
 
-#c[Con il verbo "_dovere_" al modo indicativo (es. "_deve_", "_devono"_, ...), il congiuntivo esortativo (es. "_sia installato..._") e l'indicativo presente degli altri verbi (es. "l'altezza è...") si descrivono le prescrizioni cogenti da applicare nel contesto esaminato.]
+#c[Con il verbo "_dovere_" al modo indicativo (es.~"_deve_", "_devono"_, ...), il congiuntivo esortativo (es.~"_sia installato..._") e l'indicativo presente degli altri verbi (es.~"_l'altezza è..._") si descrivono le prescrizioni cogenti da applicare nel contesto esaminato.]
 
-#c[Con il verbo "_dovere_" al modo condizionale (es. "_dovrebbe_", "_dovrebbero_", ...), gli avverbi "_generalmente_" e "_di norma_" si descrivono indicazioni non obbligatorie che consentono al progettista di scegliere modalità tecniche diverse da quella indicata nel contesto esaminato; tali modalità diverse devono essere analizzate e descritte nella documentazione progettuale.]
+#c[Con il verbo "_dovere_" al modo condizionale (es.~"_dovrebbe_", "_dovrebbero_", ...), gli avverbi "_generalmente_" e "_di norma_" si descrivono indicazioni non obbligatorie che consentono al progettista di scegliere modalità tecniche diverse da quella indicata nel contesto esaminato; tali modalità diverse devono essere analizzate e descritte nella documentazione progettuale.]
 
-#c[Con il verbo "_potere_" (es. "_può essere installato_") si suggeriscono opportune valutazioni o modalità tecniche aggiuntive che si considerano efficaci nel contesto esaminato, anche ai fini della valutazione della sicurezza equivalente.]
+#c[Con il verbo "_potere_" (es.~"_può essere installato_") si suggeriscono opportune valutazioni o modalità tecniche aggiuntive che si considerano efficaci nel contesto esaminato, anche ai fini della valutazione della sicurezza equivalente.]
 
 #c[La congiunzione "_e_" è usata per collegare due condizioni che devono essere contemporaneamente valide (equivalente all'operatore logico _AND_).]
 
 #c[La congiunzione "_o_" è usata per collegare due condizioni che possono essere valide sia alternativamente che contemporaneamente (equivalente all'operatore logico _OR_).]
 
-#c[Nei casi in cui una condizione deve necessariamente escluderne altre (es. "o l'una o l'altra", equivalente all'operatore logico _XOR_), ciò viene esplicitamente segnalato nel testo.]
+#c[Nei casi in cui una condizione deve necessariamente escluderne altre (es.~"_o l'una o l'altra_", equivalente all'operatore logico _XOR_), ciò viene esplicitamente segnalato nel testo.]
 
 #c[Con il sostantivo "_esempio_" o con la sua abbreviazione "_es._" si propongono una o più possibilità riportate al mero scopo di indicare applicazioni pratiche di una regola o di un principio. Gli esempi sono quindi da considerare come casi indicativi, non esaustivi, forniti a mero titolo illustrativo e non costituiscono prescrizione.]
 
-#c[L'applicazione della normazione volontaria citata nel presente documento (es. ISO, EN, UNI, ...) conferisce presunzione di conformità, ma rimane _volontaria_ e non è _obbligatoria_, a meno che non sia resa cogente da altre disposizioni regolamentari.]
+#c[L'applicazione della normazione volontaria citata nel presente documento (es.~ISO, EN, UNI, ...) conferisce presunzione di conformità, ma rimane _volontaria_ e non è _obbligatoria_, a meno che non sia resa cogente da altre disposizioni regolamentari.]
 
 #c[Le note riportate nel testo hanno carattere _esplicativo_ o _complementare_ nel contesto esaminato.]

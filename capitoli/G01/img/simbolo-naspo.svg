@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="15mm" height="15mm" viewBox="0 0 1500 1500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="28.222" stroke-linejoin="round" xml:space="preserve">
+ <path fill="rgb(0,0,0)" stroke="none" d="M 887,987 L 586,987 586,387 1188,387 1188,987 887,987 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="round" d="M 887,987 L 586,987 586,387 1188,387 1188,987 887,987 Z "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 1186,1385 L 1337,1083 1035,1083 1186,1385 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="round" d="M 1186,1385 L 1337,1083 1035,1083 1186,1385 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="round" d="M 1186,987 L 1186,1087 "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="round" d="M 587,687 L 287,687 "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="round" d="M 287,87 L 287,1287 "/>
+ <g>
+  <defs>
+   <pattern id="pattern1" x="87" y="87" width="201" height="1201" patternUnits="userSpaceOnUse">
+    <g transform="translate(-87,-87)">
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="147" x2="147" y2="87"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="259" x2="259" y2="87"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="371" x2="287" y2="171"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="483" x2="287" y2="283"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="595" x2="287" y2="395"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="707" x2="287" y2="507"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="819" x2="287" y2="619"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="931" x2="287" y2="731"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="1043" x2="287" y2="843"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="1155" x2="287" y2="955"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="87" y1="1267" x2="287" y2="1067"/>
+     <line fill="rgb(0,0,0)" stroke="rgb(0,0,0)" x1="179" y1="1287" x2="287" y2="1179"/>
+    </g>
+   </pattern>
+  </defs>
+  <path style="fill:url(#pattern1)" d="M 187,1287 L 87,1287 87,87 287,87 287,1287 187,1287 Z "/>
+ </g>
+</svg>

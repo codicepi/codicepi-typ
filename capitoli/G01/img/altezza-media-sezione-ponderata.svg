@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="34mm" height="27mm" viewBox="0 0 3400 2700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="28.222" stroke-linejoin="round" xml:space="preserve">
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="49" stroke-linejoin="round" d="M 87,2085 L 2344,2085 2344,586 1592,586 1592,87 87,87 87,420 87,2085 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 2348,2080 L 3261,2080 "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 2344,586 L 2946,586 "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 2687,835 L 2687,1835 "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 2687,586 L 2604,835 2770,835 2687,586 Z "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 2687,2084 L 2770,1835 2604,1835 2687,2084 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 3114,336 L 3114,1836 "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 3114,87 L 3031,336 3197,336 3114,87 Z "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 3114,2085 L 3197,1836 3031,1836 3114,2085 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 1592,586 L 1587,2087 "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 336,1661 L 1343,1661 "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 87,1661 L 336,1744 336,1578 87,1661 Z "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 1592,1661 L 1343,1578 1343,1744 1592,1661 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 1841,1661 L 2095,1661 "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 1592,1661 L 1841,1744 1841,1578 1592,1661 Z "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 2344,1661 L 2095,1578 2095,1744 2344,1661 Z "/>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2964" y="2413"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="177" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">H</tspan></tspan><tspan class="TextPosition" y="2429"><tspan font-family="Liberation Sans, sans-serif" font-size="143px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="80" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">1</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2543" y="2413"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="177" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">H</tspan></tspan><tspan class="TextPosition" y="2429"><tspan font-family="Liberation Sans, sans-serif" font-size="143px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="80" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">2</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="772" y="1963"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="163" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">A</tspan></tspan><tspan class="TextPosition" y="1980"><tspan font-family="Liberation Sans, sans-serif" font-size="143px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="80" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">1</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1841" y="1963"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="163" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">A</tspan></tspan><tspan class="TextPosition" y="1980"><tspan font-family="Liberation Sans, sans-serif" font-size="143px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="80" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">2</tspan></tspan></tspan></text>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 1592,87 L 3261,87 "/>
+</svg>

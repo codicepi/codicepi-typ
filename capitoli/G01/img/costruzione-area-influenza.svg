@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="63mm" height="43mm" viewBox="0 0 6300 4300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="28.222" stroke-linejoin="round" xml:space="preserve">
+ <path fill="rgb(221,221,221)" stroke="none" d="M 88,1086 L 87,2084 C 86,3083 1088,3083 1088,3083 L 2689,3083 3389,3782 C 3689,4082 3888,4082 4089,4082 L 5090,4082 C 6090,4082 6090,3186 6090,3083 L 6090,990 C 6089,190 5289,87 5090,88 L 1088,87 C 486,86 87,589 88,1086 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" stroke-dasharray="29,29,29,29" d="M 88,1086 L 87,2084 C 86,3083 1088,3083 1088,3083 L 2689,3083 3389,3782 C 3689,4082 3888,4082 4089,4082 L 5090,4082 C 6090,4082 6090,3186 6090,3083 L 6090,990 C 6089,190 5289,87 5090,88 L 1088,87 C 486,86 87,589 88,1086 Z "/>
+ <path fill="rgb(255,255,255)" stroke="none" d="M 1087,2084 L 1087,1085 5089,1085 5089,3082 4089,3082 3088,2084 1087,2084 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="49" stroke-linejoin="round" d="M 1087,2084 L 1087,1085 5089,1085 5089,3082 4089,3082 3088,2084 1087,2084 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 5337,2083 L 5840,2083 "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 5088,2083 L 5337,2166 5337,2000 5088,2083 Z "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 6089,2083 L 5840,2000 5840,2166 6089,2083 Z "/>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="5283" y="1856"><tspan font-family="Arial, sans-serif" font-size="318px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="105" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">r</tspan><tspan font-family="Arial, sans-serif" font-size="212px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="513" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">offset</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1698" y="978"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2894" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Proiezione elemento</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="356" y="3450"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2365" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Area di influenza</tspan></tspan></tspan></text>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 5277,3245 L 5685,3596 "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 5088,3082 L 5222,3307 5331,3182 5088,3082 Z "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 5874,3759 L 5740,3534 5631,3659 5874,3759 Z "/>
+ <path fill="none" stroke="rgb(0,0,0)" stroke-width="11" stroke-linejoin="round" d="M 3912,3258 L 3565,3606 "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 4088,3082 L 3853,3200 3971,3317 4088,3082 Z "/>
+ <path fill="rgb(0,0,0)" stroke="none" d="M 3389,3782 L 3624,3664 3506,3547 3389,3782 Z "/>
+ <path fill="rgb(255,255,255)" stroke="none" d="M 1548,4197 L 1040,4197 1040,3623 2055,3623 2055,4197 1548,4197 Z "/>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1148" y="3859"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-style="italic" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="800" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Vista in </tspan></tspan><tspan class="TextPosition" x="1213" y="4134"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-style="italic" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="668" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">pianta</tspan></tspan></tspan></text>
+</svg>
