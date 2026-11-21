@@ -11,7 +11,7 @@
 
 // La sezione generalità è G
 #counter(heading).update(6)
-= Generalità
+= Generalità <sez_generalità>
 
 #include "capitoli/G01/G01 ch definizioni.typ"
 #include "capitoli/G02/G02 ch progettazione.typ"
@@ -20,7 +20,7 @@
 // La sezione strategia è S
 #counter(heading).update(18)
 
-= Strategia antincendio
+= Strategia antincendio <sez_strategia>
 
 #include "capitoli/S01/S01 ch reazione al fuoco.typ"
 #include "capitoli/S02/S02 ch resistenza al fuoco.typ"
@@ -36,7 +36,7 @@
 // La sezione RTV è V
 #counter(heading).update(21)
 
-= Regole tecniche verticali
+= Regole tecniche verticali <sez_rtv>
 
 #include "capitoli/V01/V01 ch aree a rischio specifico.typ"
 #include "capitoli/V02/V02 ch aree atmosfere esplosive.typ"
@@ -45,7 +45,7 @@
 // La sezione metodi è M
 #counter(heading).update(12)
 
-= Metodi
+= Metodi <sez_metodi>
 
 #include "capitoli/M01/M01 ch fse.typ"
 #include "capitoli/M02/M02 ch fse scenari.typ"
