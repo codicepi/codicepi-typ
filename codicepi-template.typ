@@ -104,8 +104,6 @@
 
   set par(
     justify: true,
-    leading: 0.5em,
-    first-line-indent: 1em,
   )
 
   // Elenchi puntati e numerati
@@ -228,10 +226,13 @@
       block(
         above: 0.4cm,
         below: 0.2cm,
-        inset: (left: 3cm),
       )[
-        #set par(first-line-indent: -3cm)
-        #counter(heading).display() #it.body
+        #grid(
+          columns: (3cm, 1fr),
+          column-gutter: 0pt,
+          align: (left, left),
+          [#counter(heading).display()], [#it.body],
+        )
       ]
     } else if it.level == 5 {
       // Paragrafo A.1.1.1.1
@@ -243,7 +244,12 @@
         above: 0.2cm,
         below: 0.2cm,
       )[
-        #counter(heading).display() #it.body
+        #grid(
+          columns: (3cm, 1fr),
+          column-gutter: 0pt,
+          align: (left, left),
+          [#counter(heading).display()], [#it.body],
+        )
       ]
     } else {
       // Ogni altro sotto paragrafo
@@ -255,7 +261,12 @@
         above: 0.1cm,
         below: 0.1cm,
       )[
-        #counter(heading).display() #it.body
+        #grid(
+          columns: (3cm, 1fr),
+          column-gutter: 0pt,
+          align: (left, left),
+          [#counter(heading).display()], [#it.body],
+        )
       ]
     }
   }
@@ -362,8 +373,16 @@
 // Funzione per cella di intestazione per tabelle
 // in attesa di fix a Typst #3640
 
-#let table-heading(body, colspan: 1) = table.cell(
+#let th(body, colspan: 1, rowspan: 1) = table.cell(
   colspan: colspan,
-  align: center,
+  rowspan: rowspan,
+  align: center + horizon,
   fill: colore-grigio,
 )[#text(weight: "bold")[#body]]
+
+#let tf(body, colspan: 1, rowspan: 1) = table.cell(
+  colspan: colspan,
+  rowspan: rowspan,
+  align: left + horizon,
+  fill: colore-grigio,
+)[#body]

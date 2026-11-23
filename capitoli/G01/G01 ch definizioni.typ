@@ -1,4 +1,4 @@
-#import "../../codicepi-template.typ": Rambiente, Rbeni, Rvita, c, comma, nota, qf, qfd, qty, table-heading
+#import "../../codicepi-template.typ": Rambiente, Rbeni, Rvita, c, comma, nota, qf, qfd, qty, tf, th
 
 == Termini, definizioni e simboli grafici <ch_definizioni>
 
@@ -185,9 +185,6 @@ $
 #figure(
   grid(
     columns: (1fr, 1fr, 1fr, 1fr),
-    rows: (2cm, 2cm),
-    column-gutter: 0.1cm,
-    row-gutter: 0.1cm,
     align: (center + horizon, left + horizon),
     image("img/altezza-media-sezione-costante.svg"),
     [$h_m = H$],
@@ -575,9 +572,9 @@ $
 
 #figure(
   table(
-    columns: (1fr, 2fr, 1fr),
+    columns: (1fr, auto, auto),
     align: (left + horizon, left + horizon, center + horizon),
-    table.header(table-heading(colspan: 2)[Grandezza misurata], table-heading[Tolleranza ammissibile]),
+    table.header(th(colspan: 2)[Grandezza misurata], th[Tolleranza ammissibile]),
     table.cell(rowspan: 2)[Lunghezza [1], [2]],
     [≤ 2,40 m],
     [±5%],
@@ -587,10 +584,14 @@ $
     [±5%],
     table.cell(colspan: 2)[Pressione [1]],
     [±5%],
-    table.cell(colspan: 3, align: left)[
-      [1] Si intendono le grandezze definite nel Sistema internazionale di misura. \
-      [2] I valori della tolleranza ammissibile si applicano anche alle misure lineari che concorrono alla determinazione della pendenza delle rampe.
-    ],
+    table.footer(
+      tf(colspan: 3)[
+        [1] Si intendono le grandezze definite nel Sistema internazionale di misura.
+
+        [2] I valori della tolleranza ammissibile si applicano anche alle misure lineari che concorrono alla determinazione della pendenza delle rampe.
+      ],
+      // FIXME riduci distanza verticale paragrafi nel table footer
+    ),
   ),
   kind: "table",
   caption: [Tolleranze ammissibili per grandezza misurata],
@@ -606,9 +607,9 @@ $
 
 #figure(
   table(
-    columns: (1fr, 1fr, 3fr),
+    columns: (auto, auto, 1fr),
     align: (left + horizon, center + horizon, left + horizon),
-    table.header(table-heading[Tipologia], table-heading[Simbolo], table-heading[Descrizione]),
+    table.header(th[Tipologia], th[Simbolo], th[Descrizione]),
     [Elementi costruttivi \ e relative aperture],
     image("img/simbolo-porta-rf.svg"),
     [Porta resistente al fuoco. \ Per tali porte la sporgenza indica il verso di apertura [1].],
@@ -638,13 +639,19 @@ $
     [Idrante a colonna soprassuolo [4]],
     image("img/simbolo-attacco-autopompa.svg"),
     [Attacco di mandata per autopompa [5]],
-    table.cell(colspan: 3, align: left)[
-      [1] Accanto al simbolo grafico devono indicarsi il simbolo e la classe di resistenza al fuoco (es.~EI 120-$"S"_"a"$). \ // FIXME macro resist fuoco?
-      [2] Deve essere specificato, anche tramite colori, se la distanza è esterna, interna o di protezione. \
-      [3] Accanto al simbolo grafico devono essere indicate le classi di spegnimento dell'estintore. \
-      [4] Accanto al simbolo grafico devono essere indicati il diametro e il numero degli attacchi di uscita. \
-      [5] Accanto al simbolo grafico deve essere indicato il numero degli attacchi di immissione.
-    ],
+    table.footer(
+      tf(colspan: 3)[
+        [1] Accanto al simbolo grafico devono indicarsi il simbolo e la classe di resistenza al fuoco (es.~EI 120-$"S"_"a"$). // FIXME macro resist fuoco?
+
+        [2] Deve essere specificato, anche tramite colori, se la distanza è esterna, interna o di protezione.
+
+        [3] Accanto al simbolo grafico devono essere indicate le classi di spegnimento dell'estintore.
+
+        [4] Accanto al simbolo grafico devono essere indicati il diametro e il numero degli attacchi di uscita.
+
+        [5] Accanto al simbolo grafico deve essere indicato il numero degli attacchi di immissione.
+      ],
+    ),
   ),
   kind: "table",
   caption: [Simboli grafici],
@@ -652,9 +659,9 @@ $
 
 #figure(
   table(
-    columns: (1fr, 1fr, 3fr),
+    columns: (auto, auto, 1fr),
     align: (left + horizon, center + horizon, left + horizon),
-    table.header(table-heading[Tipologia], table-heading[Simbolo], table-heading[Descrizione]),
+    table.header(th[Tipologia], th[Simbolo], th[Descrizione]),
     table.cell(rowspan: 2)[Sistemi di \ segnalazione],
     image("img/simbolo-pulsante-allarme.svg"),
     [Pulsante di allarme],
@@ -665,8 +672,9 @@ $
     [Erogatore di impianto ad attivazione automatica [2]],
     image("img/simbolo-erogatore-manuale.svg"),
     [Erogatore di impianto ad attivazione manuale [2]],
-    table.cell(colspan: 3, align: left)[
+    tf(colspan: 3)[
       [1] All’interno del cerchio deve essere riportato il simbolo del tipo di rivelatore.
+
       [2] All’interno del cerchio e del quadrato deve essere riportato un simbolo rappresentativo della sostanza estinguente (da richiamare in legenda).
     ],
   ),

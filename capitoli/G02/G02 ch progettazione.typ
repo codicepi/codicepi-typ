@@ -1,23 +1,4 @@
-#import "../../codicepi-template.typ": Rambiente, Rbeni, Rvita, c, nota, table-heading
-
-#let numero-heading(label) = context {
-  let target = query(label).first()
-  let nums = counter(heading).at(target.location())
-  link(target.location(), numbering("A.1.1.1.1", ..nums))
-}
-
-#let numero-figura(label, kind) = context {
-  let target = query(label).first()
-  let headings = counter(heading).at(target.location())
-  let nums = counter(figure.where(kind: kind)).at(target.location())
-  link(target.location(), numbering("A.1-1", headings.at(0), headings.at(1), nums.at(0)))
-}
-
-#let sezione(label, titolo) = [sezione #numero-heading(label) #titolo]
-#let capitolo(label) = [capitolo #numero-heading(label)]
-#let paragrafo(label) = [paragrafo #numero-heading(label)]
-#let illustrazione(label) = [illustrazione #numero-figura(label, "illustration")]
-#let tabella(label) = [tabella #numero-figura(label, "table")]
+#import "../../codicepi-template.typ": Rambiente, Rbeni, Rvita, c, nota, th
 
 #let c-continua(body) = {
   set list(indent: 1em)
@@ -72,10 +53,10 @@
 
 #c[Il presente documento si compone di quattro sezioni che disciplinano, nel loro complesso, l’intera materia antincendio:
 
-  + #sezione(<sez_generalità>, [Generalità]): contiene i principi fondamentali per la progettazione della sicurezza antincendio applicabili indistintamente a tutte le attività;
-  + #sezione(<sez_strategia>, [Strategia antincendio]): contiene le _misure antincendio_ di prevenzione, protezione e gestionali applicabili a tutte le attività, per comporre la _strategia antincendio_ al fine di mitigare il rischio d’incendio;
-  + #sezione(<sez_rtv>, [Regole tecniche verticali]): contiene le _regole tecniche verticali_, che completano, integrano o sostituiscono le misure della precedente sezione #numero-heading(<sez_strategia>) per specifiche applicazioni tecniche o determinate tipologie d’attività.
-  + #sezione(<sez_metodi>, [Metodi]): contiene la descrizione di metodologie progettuali _quantitative_ per la progettazione di misure antincendio, calibrate sulle particolari problematiche tecniche affrontate nella determinata attività.
+  + @sez_generalità: contiene i principi fondamentali per la progettazione della sicurezza antincendio applicabili indistintamente a tutte le attività;
+  + @sez_strategia: contiene le _misure antincendio_ di prevenzione, protezione e gestionali applicabili a tutte le attività, per comporre la _strategia antincendio_ al fine di mitigare il rischio d’incendio;
+  + @sez_rtv: contiene le _regole tecniche verticali_, che completano, integrano o sostituiscono le misure della precedente @sez_strategia per specifiche applicazioni tecniche o determinate tipologie d’attività. // FIXME
+  + @sez_metodi: contiene la descrizione di metodologie progettuali _quantitative_ per la progettazione di misure antincendio, calibrate sulle particolari problematiche tecniche affrontate nella determinata attività.
 ]
 
 === Obiettivi della progettazione della sicurezza antincendio <ch_progettazione_obiettivi>
@@ -101,7 +82,7 @@
   + prevenire il danno ambientale e limitare la compromissione dell’ambiente in caso d’incendio.
 ]
 
-#nota[Come specificato al #capitolo(<ch_profili_di_rischio>), la determinazione di quali edifici siano da considerarsi _pregevoli per arte o storia_ e di quali opere siano da considerarsi _strategiche_ è demandata a specifici atti normativi o ad esplicita richiesta del responsabile dell’attività.]
+#nota[Come specificato al @ch_profili_di_rischio, la determinazione di quali edifici siano da considerarsi _pregevoli per arte o storia_ e di quali opere siano da considerarsi _strategiche_ è demandata a specifici atti normativi o ad esplicita richiesta del responsabile dell’attività.]
 
 === Metodologia generale <ch_progettazione_metodologia_generale>
 
@@ -110,39 +91,29 @@
 #c[La progettazione della sicurezza antincendio delle attività è un processo iterativo, costituito dai seguenti passi:
 
   + _scopo della progettazione_: si descrive qualitativamente e quantitativamente l’attività ed il suo funzionamento, al fine di chiarire lo scopo della progettazione;
-]
 
-#nota[Ad esempio, la descrizione dell’attività può comprendere: localizzazione e contesto, finalità, vincoli, struttura organizzativa e responsabilità, tipologia e quantità di occupanti, processi produttivi, opere da costruzione, impianti, tipologia e quantità di materiali stoccati o impiegati,~…]
+  #nota[Ad esempio, la descrizione dell’attività può comprendere: localizzazione e contesto, finalità, vincoli, struttura organizzativa e responsabilità, tipologia e quantità di occupanti, processi produttivi, opere da costruzione, impianti, tipologia e quantità di materiali stoccati o impiegati,~…]
 
-#c-continua[
-  #enum(
-    start: 2,
-    [_obiettivi di sicurezza_: sono esplicitati gli obiettivi di sicurezza della progettazione previsti al #paragrafo(<ch_progettazione_obiettivi>), applicabili all’attività;],
-  )
-]
+  + _obiettivi di sicurezza_: sono esplicitati gli obiettivi di sicurezza della progettazione previsti al @ch_progettazione_obiettivi, applicabili all’attività;
 
-#nota[Ad esempio, non è necessario tutelare edifici che non risultino _pregevoli per arte o storia_, o garantire la continuità d’esercizio per opere che non siano considerate _strategiche_.]
+  #nota[Ad esempio, non è necessario tutelare edifici che non risultino _pregevoli per arte o storia_, o garantire la continuità d’esercizio per opere che non siano considerate _strategiche_.]
 
-#c-continua[
-  #enum(
-    start: 3,
-    [_valutazione del rischio_: si effettua la valutazione del rischio d’incendio di cui al #paragrafo(<ch_progettazione_valutazione_rischio>)#text(";")],
-    [_profili di rischio_: si determinano ed attribuiscono i profili di rischio, come previsto al #paragrafo(<ch_progettazione_profili_rischio>)#text(";")],
-    [_strategia antincendio_: si procede alla mitigazione del rischio valutato tramite misure preventive, protettive e gestionali che rimuovano i pericoli, riducano i rischi o proteggano dalle loro conseguenze:
+  + _valutazione del rischio_: si effettua la valutazione del rischio d’incendio di cui al @ch_progettazione_valutazione_rischio#text(";"),
+  + _profili di rischio_: si determinano ed attribuiscono i profili di rischio, come previsto al @ch_progettazione_profili_rischio#text(";"),
+  + _strategia antincendio_: si procede alla mitigazione del rischio valutato tramite misure preventive, protettive e gestionali che rimuovano i pericoli, riducano i rischi o proteggano dalle loro conseguenze:
 
-      + definendo la _strategia antincendio_ complessiva, secondo #paragrafo(<ch_progettazione_strategia_antincendio>),
-      + attribuendo i _livelli di prestazione_ per tutte le misure antincendio, come previsto al #paragrafo(<ch_progettazione_livelli_prestazione>)#text(";")
-      + individuando le _soluzioni progettuali_ che garantiscono il raggiungimento dei livelli di prestazione attribuiti, secondo #paragrafo(<ch_progettazione_soluzioni_progettuali>)#text(";")],
-    [qualora il _risultato_ della progettazione non sia ritenuto compatibile con lo _scopo_ definito al punto a, il progettista itera i passi di cui al punto e della presente metodologia.],
-  )
-]
+    + definendo la _strategia antincendio_ complessiva, secondo @ch_progettazione_strategia_antincendio,
+    + attribuendo i _livelli di prestazione_ per tutte le misure antincendio, come previsto al @ch_progettazione_livelli_prestazione#text(";")
+    + individuando le _soluzioni progettuali_ che garantiscono il raggiungimento dei livelli di prestazione attribuiti, secondo @ch_progettazione_soluzioni_progettuali#text(";"),
+  + qualora il _risultato_ della progettazione non sia ritenuto compatibile con lo _scopo_ definito al punto a, il progettista itera i passi di cui al punto e della presente metodologia.
+] // FIXME
 
 #c[Qualora disponibili, il progettista è tenuto ad applicare i contenuti delle pertinenti _regole tecniche verticali_ all’attività trattata, secondo le indicazioni dei successivi paragrafi.]
 
-#nota[La metodologia generale è schematizzata nell’#illustrazione(<il_progettazione_metodologia_generale>).]
+#nota[La metodologia generale è schematizzata nell’@il_progettazione_metodologia_generale.]
 
 #figure(
-  image("img/metodologia-generale.png", width: 16.002cm),
+  image("img/metodologia-generale.png", width: 16.002cm), // FIXME registra odg immagine
   kind: "illustration",
   caption: [Schematizzazione della metodologia generale],
 ) <il_progettazione_metodologia_generale>
@@ -181,7 +152,7 @@
 
 #c[Qualora siano disponibili pertinenti _regole tecniche verticali_, la valutazione del rischio d’incendio da parte del progettista è limitata agli aspetti peculiari della specifica attività trattata.]
 
-#c[Negli ambiti delle attività in cui sono presenti _sostanze infiammabili_ allo stato di gas, vapori, nebbie o polveri combustibili, la valutazione del rischio d’incendio deve includere anche la valutazione del rischio per _atmosfere esplosive_ (#capitolo(<ch_aree_atmosfere_esplosive>)).]
+#c[Negli ambiti delle attività in cui sono presenti _sostanze infiammabili_ allo stato di gas, vapori, nebbie o polveri combustibili, la valutazione del rischio d’incendio deve includere anche la valutazione del rischio per _atmosfere esplosive_ (@ch_aree_atmosfere_esplosive).]
 
 ==== Attribuzione dei profili di rischio <ch_progettazione_profili_rischio>
 
@@ -192,9 +163,9 @@
   #Rambiente, _profilo di rischio_ relativo alla tutela dell’_ambiente_ dagli effetti dell’incendio.
 ]
 
-#nota[I profili di rischio sono _indicatori speditivi_ e _sintetici_ della tipologia di rischio presente negli ambiti dell’attività e non sono sostitutivi della dettagliata valutazione del rischio d’incendio condotta dal progettista secondo le indicazioni del #paragrafo(<ch_progettazione_valutazione_rischio>).]
+#nota[I profili di rischio sono _indicatori speditivi_ e _sintetici_ della tipologia di rischio presente negli ambiti dell’attività e non sono sostitutivi della dettagliata valutazione del rischio d’incendio condotta dal progettista secondo le indicazioni del @ch_progettazione_valutazione_rischio.]
 
-#c[Il #capitolo(<ch_profili_di_rischio>) fornisce al progettista:
+#c[Il @ch_profili_di_rischio fornisce al progettista:
 
   + la metodologia per _determinare_ quantitativamente i profili di rischio #Rvita ed~#Rbeni,
   + i criteri per _valutare_ il profilo di rischio #Rambiente.
@@ -212,7 +183,7 @@
 
 ==== Attribuzione dei livelli di prestazione alle misure antincendio <ch_progettazione_livelli_prestazione>
 
-#c[Effettuata la _valutazione del rischio_ d’incendio per l’attività e stabiliti i profili di rischio #Rvita, #Rbeni ed #Rambiente nei pertinenti ambiti (#capitolo(<ch_profili_di_rischio>)), il progettista attribuisce alle misure antincendio i relativi _livelli di prestazione_.]
+#c[Effettuata la _valutazione del rischio_ d’incendio per l’attività e stabiliti i profili di rischio #Rvita, #Rbeni ed #Rambiente nei pertinenti ambiti (@ch_profili_di_rischio), il progettista attribuisce alle misure antincendio i relativi _livelli di prestazione_.]
 
 #c[Ciascun capitolo della sezione Strategia antincendio fornisce al progettista i criteri di attribuzione dei _livelli di prestazione_ alle _misure antincendio_.]
 
@@ -220,11 +191,11 @@
 
 #c[Per ogni _misura antincendio_, il progettista può attribuire _livelli di prestazione_ differenti da quelli proposti nel presente documento.
 
-  Se i livelli attribuiti sono inferiori a quelli proposti, il progettista è tenuto a dimostrare il raggiungimento degli obiettivi di sicurezza antincendio impiegando uno dei _metodi di progettazione della sicurezza antincendio_ previsti al #paragrafo(<ch_progettazione_metodi>).
+  Se i livelli attribuiti sono inferiori a quelli proposti, il progettista è tenuto a dimostrare il raggiungimento degli obiettivi di sicurezza antincendio impiegando uno dei _metodi di progettazione della sicurezza antincendio_ previsti al @ch_progettazione_metodi.
 
   Al fine di consentire la valutazione di tale dimostrazione da parte del Corpo nazionale dei Vigili del fuoco, è ammessa l’attribuzione di _livelli di prestazione_ differenti da quelli proposti solo nelle _attività con valutazione del progetto_.]
 
-#nota[La definizione di _attività con valutazione del progetto_ si trova nel #capitolo(<ch_definizioni>) ed include, oltre alle attività con valutazione _ordinaria_, anche quelle con possibilità della valutazione _in deroga_.]
+#nota[La definizione di _attività con valutazione del progetto_ si trova nel @ch_definizioni ed include, oltre alle attività con valutazione _ordinaria_, anche quelle con possibilità della valutazione _in deroga_.]
 
 ==== Individuazione delle soluzioni progettuali <ch_progettazione_soluzioni_progettuali>
 
@@ -237,7 +208,7 @@
   + _soluzioni in deroga_.
 ]
 
-#nota[Le definizioni di _soluzioni conforme_, _soluzione alternativa_ e _soluzione in deroga_ si trovano nel #capitolo(<ch_definizioni>).]
+#nota[Le definizioni di _soluzioni conforme_, _soluzione alternativa_ e _soluzione in deroga_ si trovano nel @ch_definizioni.]
 
 #c[Qualora disponibili, nelle pertinenti _regole tecniche verticali_ possono essere descritte eventuali _soluzioni progettuali_ complementari o sostitutive di quelle dettagliate nella sezione Strategia antincendio, oppure semplici prescrizioni aggiuntive per la specifica tipologia d’attività.]
 
@@ -253,55 +224,54 @@
 
 #c[Il progettista può fare ricorso alle _soluzioni alternative_ proposte nei pertinenti paragrafi della sezione _Strategia antincendio_ e delle _regole tecniche verticali_, oppure può proporre specifiche _soluzioni alternative_ con i metodi di cui al comma successivo.]
 
-#c[Il progettista che fa ricorso alle _soluzioni alternative_ è tenuto a dimostrare il raggiungimento del collegato _livello di prestazione_, impiegando uno dei _metodi di progettazione della sicurezza antincendio_ ammessi per ciascuna misura antincendio tra quelli del #paragrafo(<ch_progettazione_metodi>).]
+#c[Il progettista che fa ricorso alle _soluzioni alternative_ è tenuto a dimostrare il raggiungimento del collegato _livello di prestazione_, impiegando uno dei _metodi di progettazione della sicurezza antincendio_ ammessi per ciascuna misura antincendio tra quelli del @ch_progettazione_metodi.]
 
 #c[Al fine di consentire la valutazione di tale dimostrazione da parte del Corpo nazionale dei Vigili del fuoco, è ammesso l’impiego di _soluzioni alternative_ solo nelle _attività con valutazione del progetto_.]
 
-#nota[La definizione di _attività con valutazione del progetto_ si trova nel #capitolo(<ch_definizioni>) ed include, oltre alle attività con valutazione _ordinaria_, anche quelle con possibilità della valutazione _in deroga_.]
+#nota[La definizione di _attività con valutazione del progetto_ si trova nel @ch_definizioni ed include, oltre alle attività con valutazione _ordinaria_, anche quelle con possibilità della valutazione _in deroga_.]
 
 ===== Applicazione di soluzioni in deroga <ch_progettazione_soluzioni_in_deroga>
 
 #c[Se non possono essere efficacemente applicate né le _soluzioni conformi_, né le _soluzioni alternative_, il progettista può ricorrere al procedimento di deroga secondo le procedure previste dalla vigente normativa.]
 
-#c[Il progettista che sceglie le _soluzioni in deroga_ è tenuto a dimostrare il raggiungimento dei pertinenti obiettivi di prevenzione incendi di cui al #paragrafo(<ch_progettazione_obiettivi>), impiegando uno dei _metodi di progettazione della sicurezza antincendio_ previsti al #paragrafo(<ch_progettazione_metodi_aggiuntivi>).]
+#c[Il progettista che sceglie le _soluzioni in deroga_ è tenuto a dimostrare il raggiungimento dei pertinenti obiettivi di prevenzione incendi di cui al @ch_progettazione_obiettivi, impiegando uno dei _metodi di progettazione della sicurezza antincendio_ previsti al @ch_progettazione_metodi_aggiuntivi.]
 
 #c[Tutte le disposizioni del presente documento, incluse quelle definite nelle regole tecniche verticali, possono diventare oggetto di procedimento di deroga.]
 
 
 === Metodi di progettazione della sicurezza antincendio <ch_progettazione_metodi>
 
-#c[La #tabella(<ta_progettazione_metodi>) elenca i metodi per la progettazione della sicurezza antincendio impiegabili da parte di _progettista_ per:
+#c[La @ta_progettazione_metodi elenca i metodi per la progettazione della sicurezza antincendio impiegabili da parte di _progettista_ per:
 
-  + la _verifica delle soluzioni alternative_ al fine di dimostrare il raggiungimento del collegato _livello di prestazione_ (#paragrafo(<ch_progettazione_soluzioni_alternative>))#text(";")
-  + la _verifica del livello di prestazione_ attribuito alle _misure antincendio_ al fine di dimostrare il raggiungimento dei pertinenti obiettivi di sicurezza antincendio (#paragrafo(<ch_progettazione_livelli_prestazione>)).
+  + la _verifica delle soluzioni alternative_ al fine di dimostrare il raggiungimento del collegato _livello di prestazione_ (@ch_progettazione_soluzioni_alternative)#text(";")
+  + la _verifica del livello di prestazione_ attribuito alle _misure antincendio_ al fine di dimostrare il raggiungimento dei pertinenti obiettivi di sicurezza antincendio (@ch_progettazione_livelli_prestazione).
 ]
 
 #figure(
   table(
-    columns: (4.101cm, 11.901cm),
+    columns: (1fr, 3fr),
     align: (left + horizon, left + horizon),
-    table.header(
-      table-heading[Metodi],
-      table-heading[Descrizione e limiti d’applicazione],
-    ),
+    table.header(th[Metodi], th[Descrizione e limiti d’applicazione]),
     [Applicazione di norme o documenti tecnici],
     [Il _progettista_ applica norme o documenti tecnici adottati da organismi europei o internazionali, riconosciuti nel settore della sicurezza antincendio. Tale applicazione, fatti salvi gli obblighi connessi all’impiego di prodotti soggetti a normativa comunitaria di armonizzazione e alla regolamentazione nazionale, deve essere attuata nella sua completezza, ricorrendo a soluzioni, configurazioni e componenti richiamati nelle norme o nei documenti tecnici impiegati, evidenziandone specificatamente l’idoneità, per ciascuna configurazione considerata, in relazione ai profili di rischio dell’attività.],
+
     [Soluzioni progettuali che prevedono l’impiego di prodotti o tecnologie di tipo innovativo],
     [
       L’impiego di prodotti o tecnologie di tipo _innovativo_, frutto della evoluzione tecnologica, è consentito in tutti i casi in cui l’idoneità all’impiego possa essere attestata dal _professionista antincendio_, in sede di verifica ed analisi sulla base di una valutazione del rischio connessa all’impiego dei medesimi prodotti o tecnologie, supportata da pertinenti certificazioni di prova riferite a:
 
-      #set list(marker: [●])
       - norme o specifiche di prova nazionali;
       - norme o specifiche di prova internazionali;
       - specifiche di prova adottate da laboratori a tale fine autorizzati.
     ],
+
     [Ingegneria della sicurezza antincendio],
-    [Il _professionista antincendio_ applica i metodi dell’ingegneria della sicurezza antincendio, secondo procedure, ipotesi e limiti indicati in particolare nei capitoli #numero-heading(<ch_fse>), #numero-heading(<ch_fse_scenari>) e #numero-heading(<ch_fse_vita>) oppure in base a principi tecnico-scientifici riconosciuti a livello nazionale o internazionale.],
+    [Il _professionista antincendio_ applica i metodi dell’ingegneria della sicurezza antincendio, secondo procedure, ipotesi e limiti indicati in particolare in @ch_fse, @ch_fse_scenari e @ch_fse_vita oppure in base a principi tecnico-scientifici riconosciuti a livello nazionale o internazionale.],
+
     [Prove sperimentali],
     [
       Il _professionista antincendio_ esegue prove sperimentali in scala reale o in scala adeguatamente rappresentativa, finalizzata a riprodurre ed analizzare dal vero i fenomeni (es. chimico-fisici e termodinamici, esodo degli occupanti, …) che caratterizzano la problematica oggetto di valutazione avente influenza sugli obiettivi di prevenzione incendi.
 
-      Le prove sperimentali sono condotte secondo protocolli standardizzati oppure condivisi con la Direzione centrale per la prevenzione e la sicurezza tecnica del Corpo nazionale dei Vigili del fuoco.
+      Le prove sperimentali sono condotte secondo protocolli standardizzati oppure condivisi con la Direzione centrale per la prevenzione e la sicurezza tecnica del Corpo nazionale dei Vigili del fuoco. // FIXME indent???
 
       Le prove sono svolte alla presenza di rappresentanza qualificata del Corpo nazionale dei Vigili del fuoco, su richiesta del responsabile dell’attività.
 
@@ -314,16 +284,13 @@
 
 === Metodi aggiuntivi di progettazione della sicurezza antincendi <ch_progettazione_metodi_aggiuntivi>
 
-#c[Per la verifica di _soluzioni in deroga_ (#paragrafo(<ch_progettazione_soluzioni_in_deroga>)), al fine di dimostrare il raggiungimento dei pertinenti obiettivi di prevenzione incendi indicati al #paragrafo(<ch_progettazione_obiettivi>), il _professionista antincendio_ può impiegare i metodi per la progettazione della sicurezza antincendio di cui alla #tabella(<ta_progettazione_metodi>) ed i metodi aggiuntivi della #tabella(<ta_progettazione_metodi_aggiuntivi>).]
+#c[Per la verifica di _soluzioni in deroga_ (@ch_progettazione_soluzioni_in_deroga), al fine di dimostrare il raggiungimento dei pertinenti obiettivi di prevenzione incendi indicati al @ch_progettazione_obiettivi, il _professionista antincendio_ può impiegare i metodi per la progettazione della sicurezza antincendio di cui alla @ta_progettazione_metodi ed i metodi aggiuntivi della @ta_progettazione_metodi_aggiuntivi.]
 
 #figure(
   table(
-    columns: (4.101cm, 11.901cm),
+    columns: (1fr, 3fr),
     align: (left + horizon, left + horizon),
-    table.header(
-      table-heading[Metodi],
-      table-heading[Descrizione e limiti d’applicazione],
-    ),
+    table.header(th[Metodi], th[Descrizione e limiti d’applicazione]),
     [Analisi e progettazione secondo giudizio esperto],
     [L’analisi secondo giudizio esperto è fondata sui principi generali di prevenzione incendi e sul bagaglio di conoscenze del _professionista antincendio_, esperto del settore della sicurezza antincendio.],
   ),
@@ -340,7 +307,7 @@
 
 #nota[Ad esempio: appropriata applicazione delle soluzioni conformi, …]
 
-#c-continua[
+#c-continua[ // FIXME
   #enum(
     start: 2,
     [la _corrispondenza_ delle misure di prevenzione incendi agli obiettivi di sicurezza perseguiti secondo le indicazioni del presente documento;],
@@ -364,7 +331,7 @@
 
 ==== Prescrizioni comuni <ch_progettazione_impianti_prescrizioni_comuni>
 
-#nota[Le definizioni di _progetto dell’impianto_, _specifica dell’impianto_, _manuale d’uso e manutenzione dell’impianto_, _modifica sostanziale_ e le definizioni afferenti la normazione volontaria sono reperibili nel #capitolo(<ch_definizioni>).]
+#nota[Le definizioni di _progetto dell’impianto_, _specifica dell’impianto_, _manuale d’uso e manutenzione dell’impianto_, _modifica sostanziale_ e le definizioni afferenti la normazione volontaria sono reperibili nel @ch_definizioni.]
 
 #c[Per l’installazione e la modifica sostanziale degli impianti deve essere redatto un _progetto dell’impianto_, elaborato secondo la regola dell’arte e sulla base dei requisti indicati nella _specifica dell’impianto_.]
 
@@ -372,7 +339,7 @@
 
 #c[Fatti salvi gli obblighi connessi all’impiego di prodotti rientranti nel campo di applicazione di _specifiche tecniche armonizzate_, qualora il _progetto dell’impianto_ sia elaborato secondo _norme internazionali_ o _norme riconosciute a livello internazionale_, _TS_ o _TR_, lo stesso deve essere a firma di _professionista antincendio_.]
 
-#c[Il _progetto dell’impianto_ deve essere a firma di _professionista antincendio_ anche in caso di soluzioni progettuali che prevedono l’impiego di _prodotti o tecnologie di tipo innovativo_ di cui al #paragrafo(<ch_progettazione_metodi>).]
+#c[Il _progetto dell’impianto_ deve essere a firma di _professionista antincendio_ anche in caso di soluzioni progettuali che prevedono l’impiego di _prodotti o tecnologie di tipo innovativo_ di cui al @ch_progettazione_metodi.]
 
 #c[Le norme o i documenti tecnici di cui al comma 3 devono essere applicati in ogni loro parte, evidenziandone specificatamente l’idoneità della realizzazione, compreso l’utilizzo dei componenti necessari al corretto funzionamento dell’impianto.]
 
@@ -388,9 +355,9 @@
 
 ==== Sistemi o impianti a disponibilità superiore <ch_progettazione_impianti_disponibilita_superiore>
 
-#nota[La definizione di _sistemi o impianti a disponibilità superiore_ è reperibile nel #capitolo(<ch_definizioni>). Le definizioni di _disponibilità (availability), affidabilità (reliability), manutenibilità (maintainability), supporto logistico della manutenzione (maintenance support performance), stato degradato (degraded state), stato di indisponibilità (down state), guasto (failure) e tasso di guasto medio (mean failure rate)_ sono riportate nella norma UNI EN 13306.]
+#nota[La definizione di _sistemi o impianti a disponibilità superiore_ è reperibile nel @ch_definizioni. Le definizioni di _disponibilità (availability), affidabilità (reliability), manutenibilità (maintainability), supporto logistico della manutenzione (maintenance support performance), stato degradato (degraded state), stato di indisponibilità (down state), guasto (failure) e tasso di guasto medio (mean failure rate)_ sono riportate nella norma UNI EN 13306.]
 
-#c[La _disponibilità superiore_ per sistemi o impianti può essere ottenuta tramite:
+#c[La _disponibilità superiore_ per sistemi o impianti può essere ottenuta tramite: // FIXME
 
   + migliore _affidabilità_,
 ]
