@@ -1,6 +1,7 @@
 // Template del Codice di prevenzione incendi
 
-// Gestione liste
+// Gestione avanzata liste
+
 #import "@preview/itemize:0.3.1" as el
 
 // Gestione unità di misura
@@ -21,21 +22,17 @@
 #let h = $"h"$
 #let metri-quadrati = $"m"^2$ // FIXME units
 
-
-// Configurazioni titoli
+// Configurazioni
 
 #let colore-titoli = rgb("#21409a")
 #let tratto-capitolo = stroke(2pt + black)
 #let tratto-paragrafo = stroke(1pt + black)
 #let tratto-pie-pagina = stroke(.5pt + black)
-
-// Configurazioni tabelle
-
 #let colore-tabelle = rgb("#dddddd")
 #let tratto-tabella = .5pt
 #let inset-tabella = 6pt
 
-// Funzione celle header e footer tabelle
+// Funzione per celle header e footer tabelle
 // in attesa di fix a Typst #3640
 
 #let th(body, colspan: 1, rowspan: 1) = table.cell(
@@ -65,7 +62,8 @@
     #grid(
       columns: (3.4cm, 1fr),
       column-gutter: .2cm,
-      //stroke: red, // debug
+      stroke: red,
+      // debug
       align(right)[Nota], align(left)[#body],
     )
   ]
@@ -95,6 +93,15 @@
   }
 }
 
+// Funzione per riferimento
+
+#let ref-title(label) = context {
+  let el = query(label).first()
+  link(el.location())[#ref(label) _#el.body _]
+}  // con numero e titolo
+
+#let ref-num(label) = ref(label, supplement: none)  // solo numero
+
 
 // Inizializzazione doc
 
@@ -108,55 +115,107 @@
 
   set heading(
     numbering: "A.1",
-    supplement: "paragrafo", // default
+    supplement: "Paragrafo", // default
   )
-  show heading.where(level: 1): set heading(supplement: "sezione")
-  show heading.where(level: 2): set heading(supplement: "capitolo")
 
-  let show-heading(label, body, label-align: right, stroke: none) = pad(left: -2.8cm, block(
+  show heading.where(level: 1): set heading(supplement: "Sezione")
+  show heading.where(level: 2): set heading(supplement: "Capitolo")
+
+  let show-heading(
+    it,
+    size: 11pt,
+    weight: "normal",
+    supplement: none,
+    align: right,
+    stroke: none,
+    above: 0cm,
+    below: 0cm,
+  ) = pad(left: -2.8cm, block(
+    above: above,
+    below: below,
     inset: (top: .2cm),
     stroke: (top: stroke),
   )[
+    #set text(font: "Liberation Sans", fill: colore-titoli, size: size, weight: weight)
     #grid(
       columns: (3.3cm, 1fr),
       column-gutter: .2cm,
-      align: (label-align, left),
-      // stroke: red, // debug
-      [#label], [#body],
+      align: (align, left),
+      stroke: red,
+      // debug
+      [#supplement #counter(heading).display(it.numbering)], it.body,
     )
   ])
 
-  show heading: it => {
-    set text(
-      fill: colore-titoli,
-      font: "Liberation Sans",
+  show heading.where(level: 1): it => {
+    pagebreak()
+    show-heading(
+      it,
+      size: 14pt,
+      weight: "bold",
+      supplement: it.supplement,
+      align: left,
+      stroke: tratto-capitolo,
+      above: 1.5em,
+      below: 0.8em,
     )
-    if it.numbering == none {
-      it
-    } else if it.level == 1 {
-      set text(size: 14pt)
-      let label = [Sezione #counter(heading).display(it.numbering)]
-      let body = it.body
-      pagebreak()
-      show-heading(label, body, label-align: left, stroke: tratto-capitolo)
-    } else if it.level == 2 {
-      set text(size: 14pt)
-      let label = [Capitolo #counter(heading).display(it.numbering)]
-      let body = it.body
-      pagebreak()
-      counter(page).update(1)
-      show-heading(label, body, label-align: left, stroke: tratto-capitolo)
-    } else if it.level == 3 {
-      set text(size: 12pt)
-      let label = [#counter(heading).display(it.numbering)]
-      let body = it.body
-      show-heading(label, body, label-align: left, stroke: tratto-paragrafo)
-    } else {
-      set text(size: 12pt)
-      let label = [#counter(heading).display(it.numbering)]
-      let body = it.body
-      show-heading(label, body)
-    }
+  }
+
+  show heading.where(level: 2): it => {
+    pagebreak()
+    // Reset counters
+    counter(page).update(1)
+    counter(figure.where(kind: table)).update(0)
+    counter(figure.where(kind: image)).update(0)
+    show-heading(
+      it,
+      size: 14pt,
+      weight: "bold",
+      supplement: it.supplement,
+      align: left,
+      stroke: tratto-capitolo,
+      above: 1.5em,
+      below: 0.8em,
+    )
+  }
+
+  show heading.where(level: 3): it => {
+    show-heading(
+      it,
+      size: 12pt,
+      weight: "bold",
+      supplement: none,
+      align: left,
+      stroke: tratto-paragrafo,
+      above: 1.5em,
+      below: 0.8em,
+    )
+  }
+
+  show heading.where(level: 4): it => {
+    show-heading(
+      it,
+      size: 12pt,
+      weight: "bold",
+      supplement: none,
+      align: left,
+      stroke: none,
+      above: 1.5em,
+      below: 0.8em,
+    )
+  }
+
+  show heading.where(level: 5): it => {
+    show-heading(
+      it,
+      size: 12pt,
+      weight: "regular",
+      supplement: none,
+      align: left,
+      stroke: none,
+      above: 1.5em,
+      below: 0.8em,
+    )
   }
 
   set text(
@@ -180,7 +239,7 @@
     label-align: right,
     label-width: enum-label-width,
     body-indent: enum-body-indent,
-    // label-format: (stroke: red), // debug
+    label-format: (stroke: red), // debug
   )
 
   set enum(
@@ -193,14 +252,16 @@
 
   // Figure
 
-  show figure: set figure(
+  set figure(
     numbering: (..nums) => context {
       let headings = counter(heading).get()
       numbering("A.1-1", headings.at(0), headings.at(1), nums.pos().at(0))
     },
+    supplement: none, // default
   )
 
   show figure.where(kind: image): set figure(supplement: "Illustrazione")
+  show figure.where(kind: table): set figure(supplement: "Tabella")
 
   show figure: it => pad(left: -2.8cm)[#it]
 
@@ -211,8 +272,7 @@
       style: "italic",
       fill: colore-titoli,
     )
-    set align(left)
-    it
+    block(width: 100%, align(left, it))
   }
 
   // Tabelle
