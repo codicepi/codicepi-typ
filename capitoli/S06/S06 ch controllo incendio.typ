@@ -1,4 +1,4 @@
-#import "../../codicepi-template.typ": c, comma, nota
+#import "../../codicepi-template.typ": nota
 
 == Controllo dell'incendio <ch_controllo_incendio>
 

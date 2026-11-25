@@ -1,3 +1,3 @@
-#import "../../codicepi-template.typ": c, comma, nota
+#import "../../codicepi-template.typ": nota
 
 == Esodo <ch_esodo>

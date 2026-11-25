@@ -1,3 +1,3 @@
-#import "../../codicepi-template.typ": c, comma, nota
+#import "../../codicepi-template.typ": nota
 
 == Vani degli ascensori <ch_ascensori>

@@ -1,3 +1,3 @@
-#import "../../codicepi-template.typ": comma, c, nota
+#import "../../codicepi-template.typ": nota
 
 == Operatività antincendio <ch_operatività>

@@ -2,12 +2,8 @@
 // Documento principale del Codice di prevenzione incendi
 //
 
-#import "codicepi-template.typ": c, codicepi-template, comma
-
-#show: codicepi-template.with(
-  titolo: "Regola Tecnica Orizzontale",
-  sottotitolo: "Struttura di esempio per documento normativo",
-)
+#import "codicepi-template.typ": codicepi-template
+#show: codicepi-template
 
 // La sezione generalità è G
 #counter(heading).update(6)

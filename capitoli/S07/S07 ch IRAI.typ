@@ -1,3 +1,3 @@
-#import "../../codicepi-template.typ": comma, c, nota
+#import "../../codicepi-template.typ": nota
 
 == Rivelazione ed allarme <ch_IRAI>

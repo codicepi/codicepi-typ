@@ -1,3 +1,3 @@
-#import "../../codicepi-template.typ": comma, c, nota
+#import "../../codicepi-template.typ": nota
 
 == Sicurezza degli impianti tecnologici e di servizio <ch_sicurezza_impianti>
