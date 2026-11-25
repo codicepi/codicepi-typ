@@ -1,8 +1,6 @@
 #import "../../codicepi-template.typ": Rambiente, Rbeni, Rvita, nota, th
 
 
-#counter(figure.where(kind: "illustration")).update(0)
-
 == Progettazione per la sicurezza antincendio <ch_progettazione>
 
 === Principi e caratteristiche del documento <ch_progettazione_principi>
@@ -250,6 +248,7 @@
         - norme o specifiche di prova internazionali;
         - specifiche di prova adottate da laboratori a tale fine autorizzati.
       ],
+      // FIXME punti elenco in tabella
 
       [Ingegneria della sicurezza antincendio],
       [Il _professionista antincendio_ applica i metodi dell’ingegneria della sicurezza antincendio, secondo procedure, ipotesi e limiti indicati in particolare in @ch_fse, @ch_fse_scenari e @ch_fse_vita oppure in base a principi tecnico-scientifici riconosciuti a livello nazionale o internazionale.],

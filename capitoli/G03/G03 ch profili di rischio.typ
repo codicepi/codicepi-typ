@@ -1,10 +1,6 @@
-#import "../../codicepi-template.typ": Rambiente, Rbeni, Rvita, nota, qf, tf, th
-
-#let delta-occ = $"δ"_"occ"$
-#let delta-alpha = $"δ"_"α"$
-#let t-alpha = $"t"_"α"$
-#let h = $"h"$
-#let metri-quadrati = $"m"^2$
+#import "../../codicepi-template.typ": (
+  Rambiente, Rbeni, Rvita, delta-alpha, delta-occ, h, metri-quadrati, nota, qf, t-alpha, tf, th,
+)
 
 
 == Determinazione dei profili di rischio delle attività <ch_profili_di_rischio>
