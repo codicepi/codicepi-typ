@@ -216,7 +216,7 @@
   )
 
   show heading: it => {
-    // testo default per titoli 
+    // testo default per titoli
     set text(
       font: "Liberation Sans",
       size: 15pt,

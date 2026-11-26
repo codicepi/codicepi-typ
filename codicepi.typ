@@ -2,8 +2,17 @@
 // Documento principale del Codice di prevenzione incendi
 //
 
-#import "codicepi-template.typ": codicepi-template
+#import "codicepi-template.typ": codicepi-template, comma-list-style, normal-list-style
 #show: codicepi-template
+
+// Pagina di intestazione FIXME
+
+// Pagina allegato FIXME
+
+// Indice generale FIXME
+
+// Mostra la numerazione dei commi
+#show: comma-list-style
 
 // La sezione generalità è G
 #counter(heading).update(6)
@@ -37,6 +46,18 @@
 #include "capitoli/V01/V01 ch aree a rischio specifico.typ"
 #include "capitoli/V02/V02 ch aree atmosfere esplosive.typ"
 #include "capitoli/V03/V02 ch ascensori.typ"
+//#include "capitoli/V04/V04 ch rtv uffici.typ"
+//#include "capitoli/V05/V05 ch rtv alberghi.typ"
+//#include "capitoli/V06/V06 ch rtv autorimesse.typ"
+//#include "capitoli/V07/V07 ch rtv scuole.typ"
+//#include "capitoli/V08/V08 ch rtv commerciali.typ"
+//#include "capitoli/V09/V09 ch rtv asili.typ"
+//#include "capitoli/V10/V10 ch rtv edifici tutelati.typ"
+//#include "capitoli/V11/V11 ch rtv strutture sanitarie.typ"
+//#include "capitoli/V12/V12 ch rtv altre attività in edifici tutelati.typ"
+//#include "capitoli/V13/V13 ch rtv chiusure ambito.typ"
+//#include "capitoli/V14/V14 ch rtv ed civile abitazione.typ"
+//#include "capitoli/V15/V15 ch rtv lps.typ"
 
 // La sezione metodi è M
 #counter(heading).update(12)

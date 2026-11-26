@@ -1,8 +1,52 @@
 // Template del Codice di prevenzione incendi
 
-// Gestione avanzata liste
+// Configurazioni
+
+#let colore-blu = rgb("#21409a")
+#let colore-grigio = rgb("#dddddd")
+
+#let tratto-capitolo = stroke(2pt + black)
+#let tratto-paragrafo = stroke(1pt + black)
+#let tratto-pie-pagina = stroke(.5pt + black)
+#let tratto-tabella = .5pt
+#let inset-tabella = 6pt
+
+#let nota-text-size = 9pt
+
+#let stroke-debug = none
+
+#let page-margin-left = 2.5cm
+#let comma-body-margin-left = 6cm
+#let comma-label-width = .6cm
+#let comma-body-indent = .1cm
+#let nota-grid-column-gutter = .2cm
+
+#let heading-body-margin-left = 5cm
+#let heading-grid-column-gutter = .2cm
+
+// Gestione avanzata liste e commi
+// Usa con:
+// show: comma-list-style
 
 #import "@preview/itemize:0.3.1" as el
+
+#let comma-indent = (
+  comma-body-margin-left - page-margin-left - comma-label-width - comma-body-indent
+)
+
+#let comma-list-style = el.inline-enum-list.with(
+  label-align: right,
+  label-width: comma-label-width,
+  body-indent: comma-body-indent,
+  indent: it => if it.level == 1 { comma-indent } else { auto },
+)
+
+#let normal-list-style = el.inline-enum-list.with(
+  label-align: right,
+  label-width: comma-label-width,
+  body-indent: comma-body-indent,
+  indent: auto,
+)
 
 // Gestione unità di misura
 
@@ -22,15 +66,6 @@
 #let h = $"h"$
 #let metri-quadrati = $"m"^2$ // FIXME units
 
-// Configurazioni
-
-#let colore-titoli = rgb("#21409a")
-#let tratto-capitolo = stroke(2pt + black)
-#let tratto-paragrafo = stroke(1pt + black)
-#let tratto-pie-pagina = stroke(.5pt + black)
-#let colore-tabelle = rgb("#dddddd")
-#let tratto-tabella = .5pt
-#let inset-tabella = 6pt
 
 // Funzione per celle header e footer tabelle
 // in attesa di fix a Typst #3640
@@ -39,31 +74,32 @@
   colspan: colspan,
   rowspan: rowspan,
   align: center + horizon,
-  fill: colore-tabelle,
+  fill: colore-grigio,
 )[#text(weight: "bold")[#body]]
 
 #let tf(body, colspan: 1, rowspan: 1) = table.cell(
   colspan: colspan,
   rowspan: rowspan,
   align: left + horizon,
-  fill: colore-tabelle,
+  fill: colore-grigio,
 )[#body]
 
 // Funzione per nota
 
-#let nota-text-size = 9pt
+#let nota-grid-column = (
+  comma-body-margin-left - page-margin-left - nota-grid-column-gutter
+)
 
 #let nota(body) = [
   #set text(
-    fill: colore-titoli,
+    fill: colore-blu,
     size: nota-text-size,
   )
-  #block(inset: (left: -2.9cm))[
+  #block()[
     #grid(
-      columns: (3.4cm, 1fr),
-      column-gutter: .2cm,
-      stroke: red,
-      // debug
+      columns: (nota-grid-column, 1fr),
+      column-gutter: nota-grid-column-gutter,
+      stroke: stroke-debug,
       align(right)[Nota], align(left)[#body],
     )
   ]
@@ -78,7 +114,7 @@
     let chapter = chapters.last()
     let nums = counter(heading).at(chapter.location())
     let chapter-number = numbering("A.1", nums.at(0), nums.at(1))
-    pad(left: -2.9cm, block(
+    block(
       inset: (top: 4pt),
       stroke: (top: tratto-pie-pagina),
     )[
@@ -89,7 +125,7 @@
         text(font: "Liberation Sans", size: 9pt)[Capitolo #chapter-number #chapter.body],
         text(font: "Liberation Sans", size: 9pt)[Pagina #chapter-number#"-"#counter(page).display()],
       )
-    ])
+    ]
   }
 }
 
@@ -108,7 +144,7 @@
 #let codicepi-template(body) = {
   set page(
     paper: "a4",
-    margin: (left: 5.3cm),
+    margin: (left: page-margin-left),
     numbering: "1",
     footer: pie-pagina,
   )
@@ -121,32 +157,43 @@
   show heading.where(level: 1): set heading(supplement: "Sezione")
   show heading.where(level: 2): set heading(supplement: "Capitolo")
 
+  let heading-grid-column = (
+    heading-body-margin-left - page-margin-left - heading-grid-column-gutter
+  )
+
   let show-heading(
     it,
     size: 11pt,
     weight: "normal",
     supplement: none,
     align: right,
-    stroke: none,
+    pad-left: 0cm,
     above: 0cm,
     below: 0cm,
-  ) = pad(left: -2.8cm, block(
+    inset: (top: .2cm),
+    stroke: none,
+  ) = block(
     above: above,
     below: below,
-    inset: (top: .2cm),
+    inset: inset,
     stroke: (top: stroke),
   )[
-    #set text(font: "Liberation Sans", fill: colore-titoli, size: size, weight: weight)
+    #set text(
+      font: "Liberation Sans",
+      fill: colore-blu,
+      size: size,
+      weight: weight,
+    )
     #grid(
-      columns: (3.3cm, 1fr),
-      column-gutter: .2cm,
+      columns: (heading-grid-column + pad-left, 1fr),
+      column-gutter: heading-grid-column-gutter,
       align: (align, left),
-      stroke: red,
-      // debug
+      stroke: stroke-debug,
       [#supplement #counter(heading).display(it.numbering)], it.body,
     )
-  ])
+  ]
 
+  // Heading Sezione
   show heading.where(level: 1): it => {
     pagebreak()
     show-heading(
@@ -155,9 +202,11 @@
       weight: "bold",
       supplement: it.supplement,
       align: left,
+      pad-left: 1cm,
+      above: 0cm,
+      below: 2cm,
+      inset: (top: 5cm),
       stroke: tratto-capitolo,
-      above: 1.5em,
-      below: 0.8em,
     )
   }
 
@@ -173,9 +222,11 @@
       weight: "bold",
       supplement: it.supplement,
       align: left,
+      pad-left: 1cm,
+      above: 0cm,
+      below: 1cm,
+      inset: (top: 2cm),
       stroke: tratto-capitolo,
-      above: 1.5em,
-      below: 0.8em,
     )
   }
 
@@ -186,9 +237,11 @@
       weight: "bold",
       supplement: none,
       align: left,
+      pad-left: 0cm,
+      above: 0.8cm,
+      below: 0.4cm,
+      inset: (top: .2cm),
       stroke: tratto-paragrafo,
-      above: 1.5em,
-      below: 0.8em,
     )
   }
 
@@ -199,9 +252,11 @@
       weight: "bold",
       supplement: none,
       align: left,
+      pad-left: 0cm,
+      above: 0.4cm,
+      below: 0.2cm,
+      inset: (top: 0cm),
       stroke: none,
-      above: 1.5em,
-      below: 0.8em,
     )
   }
 
@@ -212,9 +267,11 @@
       weight: "regular",
       supplement: none,
       align: left,
+      pad-left: 0cm,
+      above: 0.2cm,
+      below: 0.2cm,
+      inset: (top: 0cm),
       stroke: none,
-      above: 1.5em,
-      below: 0.8em,
     )
   }
 
@@ -231,16 +288,6 @@
   )
 
   // Liste
-
-  let enum-label-width = .6cm
-  let enum-body-indent = .1cm
-
-  show: el.inline-enum-list.with(
-    label-align: right,
-    label-width: enum-label-width,
-    body-indent: enum-body-indent,
-    label-format: (stroke: red), // debug
-  )
 
   set enum(
     numbering: "1.a.i.",
@@ -263,14 +310,12 @@
   show figure.where(kind: image): set figure(supplement: "Illustrazione")
   show figure.where(kind: table): set figure(supplement: "Tabella")
 
-  show figure: it => pad(left: -2.8cm)[#it]
-
   show figure.caption: it => {
     set text(
       font: "Liberation Serif",
       size: 11pt,
       style: "italic",
-      fill: colore-titoli,
+      fill: colore-blu,
     )
     block(width: 100%, align(left, it))
   }
@@ -293,6 +338,11 @@
     it
   }
 
+  show table.cell: cell => {
+    show: normal-list-style
+    cell
+  }
+
   // Equazioni
 
   set math.equation(
@@ -302,7 +352,7 @@
         font: "Liberation Serif",
         size: 11pt,
         style: "italic",
-        fill: colore-titoli,
+        fill: colore-blu,
       )[
         #numbering("Eq. A.1-1", headings.at(0), headings.at(1), nums.pos().at(0))
       ]

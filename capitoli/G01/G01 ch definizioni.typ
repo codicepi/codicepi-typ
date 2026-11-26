@@ -483,7 +483,7 @@
 
   #figure(
     image("img/percorsi-accesso-piani-soccorritori.svg", width: 12cm),
-    caption: [Percorsi d'accesso ai piani per soccorritori (linee piene); gli ingressi di piano consentono ai soccorritori di raggiungere tutti i locali (linee tratteggiate)],
+    caption: [Percorsi d'accesso ai piani per soccorritori (linee piene), gli ingressi di piano consentono ai soccorritori di raggiungere tutti i locali (linee tratteggiate)],
   ) <il_percorsi_accesso_soccorritori>
 
 === Aree a rischio specifico
@@ -669,9 +669,9 @@
       image("img/simbolo-erogatore-manuale.svg"),
       [Erogatore di impianto ad attivazione manuale [2]],
       tf(colspan: 3)[
-        [1] All’interno del cerchio deve essere riportato il simbolo del tipo di rivelatore.
+        [1] All'interno del cerchio deve essere riportato il simbolo del tipo di rivelatore.
 
-        [2] All’interno del cerchio e del quadrato deve essere riportato un simbolo rappresentativo della sostanza estinguente (da richiamare in legenda).
+        [2] All'interno del cerchio e del quadrato deve essere riportato un simbolo rappresentativo della sostanza estinguente (da richiamare in legenda).
       ],
     ),
     caption: [Simboli grafici],
