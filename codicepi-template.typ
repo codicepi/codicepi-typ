@@ -66,24 +66,6 @@
 #let h = $"h"$
 #let metri-quadrati = $"m"^2$ // FIXME units
 
-
-// Funzione per celle header e footer tabelle
-// in attesa di fix a Typst #3640
-
-#let th(body, colspan: 1, rowspan: 1) = table.cell(
-  colspan: colspan,
-  rowspan: rowspan,
-  align: center + horizon,
-  fill: colore-grigio,
-)[#text(weight: "bold")[#body]]
-
-#let tf(body, colspan: 1, rowspan: 1) = table.cell(
-  colspan: colspan,
-  rowspan: rowspan,
-  align: left + horizon,
-  fill: colore-grigio,
-)[#body]
-
 // Funzione per nota
 
 #let nota-grid-column = (
@@ -137,6 +119,72 @@
 }  // con numero e titolo
 
 #let ref-num(label) = ref(label, supplement: none)  // solo numero
+
+// Funzione per celle header e footer tabelle
+// in attesa di fix a Typst #3640
+
+#let th(body, colspan: 1, rowspan: 1) = table.cell(
+  colspan: colspan,
+  rowspan: rowspan,
+  align: center + horizon,
+  fill: colore-grigio,
+)[#text(weight: "bold")[#body]]
+
+#let tf(body, colspan: 1, rowspan: 1) = table.cell(
+  colspan: colspan,
+  rowspan: rowspan,
+  align: left + horizon,
+  fill: colore-grigio,
+)[#body]
+
+// Macro per tabelle // FIXME
+
+#let ta(header: none, columns: none, footer: none, caption: none, ..args) = {
+  let cells = args.pos()
+
+  // Add header to cells
+  cells = if header == none { cells } else {
+    (table.header(..header.map(th)),) + cells
+  }
+
+  // Add footer to cells
+  cells = if footer == none { cells } else {
+    cells + (table.footer(tf(colspan: columns.len())[#footer]),)
+  }
+
+  figure(
+    table(
+      columns: columns,
+      ..args.named(),
+      ..cells,
+    ),
+    caption: caption,
+  )
+}
+
+#let ta-livelli-prestazione(caption: [Livelli di prestazione], ..args) = ta(
+  columns: (auto, 1fr),
+  align: (center + horizon, left + horizon),
+  header: ([Livello di \ prestazione], [Descrizione]),
+  ..args,
+  caption: caption,
+)
+
+#let ta-criteri-attribuzione(caption: [Criteri di attribuzione], ..args) = ta(
+  columns: (auto, 1fr),
+  align: (center + horizon, left + horizon),
+  header: ([Livello di \ prestazione], [Criteri di attribuzione]),
+  ..args,
+  caption: caption,
+)
+
+#let ta-soluzioni-alternative(caption: [Modalità progettuali per soluzioni alternative], ..args) = ta(
+  columns: (1fr, 2fr),
+  align: (left, left),
+  header: ([Oggetto della soluzione], [Modalità progettuale]),
+  ..args,
+  caption: caption,
+)
 
 
 // Inizializzazione doc
@@ -216,6 +264,7 @@
     counter(page).update(1)
     counter(figure.where(kind: table)).update(0)
     counter(figure.where(kind: image)).update(0)
+    counter(math.equation).update(0)
     show-heading(
       it,
       size: 14pt,
